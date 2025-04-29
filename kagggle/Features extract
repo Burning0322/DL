@@ -3,19 +3,19 @@
   {
    "cell_type": "code",
    "execution_count": 1,
-   "id": "591551f2",
+   "id": "fa62f88d",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-04-28T14:20:44.166348Z",
-     "iopub.status.busy": "2025-04-28T14:20:44.166100Z",
-     "iopub.status.idle": "2025-04-28T14:20:49.950054Z",
-     "shell.execute_reply": "2025-04-28T14:20:49.949235Z"
+     "iopub.execute_input": "2025-04-29T02:28:45.688280Z",
+     "iopub.status.busy": "2025-04-29T02:28:45.687938Z",
+     "iopub.status.idle": "2025-04-29T02:28:51.433393Z",
+     "shell.execute_reply": "2025-04-29T02:28:51.432511Z"
     },
     "papermill": {
-     "duration": 5.788487,
-     "end_time": "2025-04-28T14:20:49.951648",
+     "duration": 5.750257,
+     "end_time": "2025-04-29T02:28:51.434948",
      "exception": false,
-     "start_time": "2025-04-28T14:20:44.163161",
+     "start_time": "2025-04-29T02:28:45.684691",
      "status": "completed"
     },
     "tags": []
@@ -41,7 +41,7 @@
       "Requirement already satisfied: intel-cmplr-lib-rt in /usr/local/lib/python3.11/dist-packages (from mkl_umath->numpy->rdkit) (2024.2.0)\r\n",
       "Requirement already satisfied: intel-cmplr-lib-ur==2024.2.0 in /usr/local/lib/python3.11/dist-packages (from intel-openmp<2026,>=2024->mkl->numpy->rdkit) (2024.2.0)\r\n",
       "Downloading rdkit-2024.9.6-cp311-cp311-manylinux_2_28_x86_64.whl (34.3 MB)\r\n",
-      "\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m34.3/34.3 MB\u001b[0m \u001b[31m53.0 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\r\n",
+      "\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m34.3/34.3 MB\u001b[0m \u001b[31m54.4 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\r\n",
       "\u001b[?25hInstalling collected packages: rdkit\r\n",
       "Successfully installed rdkit-2024.9.6\r\n"
      ]
@@ -54,19 +54,19 @@
   {
    "cell_type": "code",
    "execution_count": 2,
-   "id": "f0de86bc",
+   "id": "406e6b7a",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-04-28T14:20:49.957827Z",
-     "iopub.status.busy": "2025-04-28T14:20:49.957579Z",
-     "iopub.status.idle": "2025-04-28T14:58:30.663909Z",
-     "shell.execute_reply": "2025-04-28T14:58:30.662805Z"
+     "iopub.execute_input": "2025-04-29T02:28:51.441791Z",
+     "iopub.status.busy": "2025-04-29T02:28:51.441499Z",
+     "iopub.status.idle": "2025-04-29T03:11:59.684865Z",
+     "shell.execute_reply": "2025-04-29T03:11:59.683823Z"
     },
     "papermill": {
-     "duration": 2260.711014,
-     "end_time": "2025-04-28T14:58:30.665231",
+     "duration": 2588.248725,
+     "end_time": "2025-04-29T03:11:59.686382",
      "exception": false,
-     "start_time": "2025-04-28T14:20:49.954217",
+     "start_time": "2025-04-29T02:28:51.437657",
      "status": "completed"
     },
     "tags": []
@@ -76,10 +76,10 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "2025-04-28 14:20:55.664085: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered\n",
+      "2025-04-29 02:28:57.173475: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered\n",
       "WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\n",
-      "E0000 00:00:1745850055.856604      19 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered\n",
-      "E0000 00:00:1745850055.912102      19 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered\n"
+      "E0000 00:00:1745893737.360352      18 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered\n",
+      "E0000 00:00:1745893737.413283      18 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered\n"
      ]
     },
     {
@@ -93,9 +93,9 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "/tmp/ipykernel_19/663661782.py:30: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
+      "/tmp/ipykernel_18/944441177.py:30: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
       "  drug_embedding = torch.load(\"/kaggle/input/ligands-n-protein/ligands_davis.pt\").to(device)\n",
-      "/tmp/ipykernel_19/663661782.py:31: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
+      "/tmp/ipykernel_18/944441177.py:31: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
       "  protein_embedding = torch.load(\"/kaggle/input/ligands-n-protein/protein_davis.pt\").to(device)\n"
      ]
     },
@@ -122,7 +122,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 1 轮, 训练损失: 0.2001, 验证损失: 0.1754, 验证 MSE: 0.1751, RMSE: 0.4184, Pearson: 0.4888\n"
+      "第 1 轮, 训练损失: 0.2001, 验证损失: 0.1754, 验证 MSE: 0.1751, RMSE: 0.4184, Pearson: 0.4890, CI: 0.8011, R2m: 0.1523\n"
      ]
     },
     {
@@ -138,7 +138,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 2 轮, 训练损失: 0.1460, 验证损失: 0.1482, 验证 MSE: 0.1488, RMSE: 0.3857, Pearson: 0.5963\n"
+      "第 2 轮, 训练损失: 0.1460, 验证损失: 0.1481, 验证 MSE: 0.1487, RMSE: 0.3856, Pearson: 0.5965, CI: 0.8545, R2m: 0.2799\n"
      ]
     },
     {
@@ -154,7 +154,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 3 轮, 训练损失: 0.1316, 验证损失: 0.1513, 验证 MSE: 0.1515, RMSE: 0.3892, Pearson: 0.6031\n"
+      "第 3 轮, 训练损失: 0.1317, 验证损失: 0.1515, 验证 MSE: 0.1516, RMSE: 0.3894, Pearson: 0.6026, CI: 0.8567, R2m: 0.2658\n"
      ]
     },
     {
@@ -170,7 +170,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 4 轮, 训练损失: 0.1273, 验证损失: 0.1462, 验证 MSE: 0.1467, RMSE: 0.3830, Pearson: 0.6095\n"
+      "第 4 轮, 训练损失: 0.1273, 验证损失: 0.1461, 验证 MSE: 0.1465, RMSE: 0.3828, Pearson: 0.6095, CI: 0.8600, R2m: 0.2905\n"
      ]
     },
     {
@@ -186,7 +186,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 5 轮, 训练损失: 0.1235, 验证损失: 0.1431, 验证 MSE: 0.1435, RMSE: 0.3789, Pearson: 0.6153\n"
+      "第 5 轮, 训练损失: 0.1235, 验证损失: 0.1435, 验证 MSE: 0.1439, RMSE: 0.3793, Pearson: 0.6150, CI: 0.8618, R2m: 0.3033\n"
      ]
     },
     {
@@ -202,7 +202,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 6 轮, 训练损失: 0.1200, 验证损失: 0.1490, 验证 MSE: 0.1492, RMSE: 0.3863, Pearson: 0.6190\n"
+      "第 6 轮, 训练损失: 0.1201, 验证损失: 0.1491, 验证 MSE: 0.1493, RMSE: 0.3864, Pearson: 0.6192, CI: 0.8659, R2m: 0.2769\n"
      ]
     },
     {
@@ -218,7 +218,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 7 轮, 训练损失: 0.1160, 验证损失: 0.1529, 验证 MSE: 0.1530, RMSE: 0.3911, Pearson: 0.6272\n"
+      "第 7 轮, 训练损失: 0.1161, 验证损失: 0.1541, 验证 MSE: 0.1542, RMSE: 0.3927, Pearson: 0.6282, CI: 0.8685, R2m: 0.2533\n"
      ]
     },
     {
@@ -234,7 +234,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 8 轮, 训练损失: 0.1098, 验证损失: 0.1519, 验证 MSE: 0.1521, RMSE: 0.3900, Pearson: 0.6329\n"
+      "第 8 轮, 训练损失: 0.1100, 验证损失: 0.1538, 验证 MSE: 0.1539, RMSE: 0.3923, Pearson: 0.6314, CI: 0.8723, R2m: 0.2549\n"
      ]
     },
     {
@@ -250,7 +250,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 9 轮, 训练损失: 0.1032, 验证损失: 0.1381, 验证 MSE: 0.1385, RMSE: 0.3722, Pearson: 0.6313\n"
+      "第 9 轮, 训练损失: 0.1035, 验证损失: 0.1428, 验证 MSE: 0.1430, RMSE: 0.3781, Pearson: 0.6275, CI: 0.8714, R2m: 0.3076\n"
      ]
     },
     {
@@ -266,7 +266,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 10 轮, 训练损失: 0.0972, 验证损失: 0.1381, 验证 MSE: 0.1391, RMSE: 0.3729, Pearson: 0.6382\n"
+      "第 10 轮, 训练损失: 0.0976, 验证损失: 0.1414, 验证 MSE: 0.1421, RMSE: 0.3770, Pearson: 0.6393, CI: 0.8729, R2m: 0.3118\n"
      ]
     },
     {
@@ -282,7 +282,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 11 轮, 训练损失: 0.0882, 验证损失: 0.1356, 验证 MSE: 0.1366, RMSE: 0.3697, Pearson: 0.6370\n"
+      "第 11 轮, 训练损失: 0.0887, 验证损失: 0.1355, 验证 MSE: 0.1362, RMSE: 0.3690, Pearson: 0.6388, CI: 0.8783, R2m: 0.3407\n"
      ]
     },
     {
@@ -298,7 +298,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 12 轮, 训练损失: 0.0817, 验证损失: 0.1326, 验证 MSE: 0.1339, RMSE: 0.3660, Pearson: 0.6375\n"
+      "第 12 轮, 训练损失: 0.0825, 验证损失: 0.1334, 验证 MSE: 0.1345, RMSE: 0.3667, Pearson: 0.6404, CI: 0.8759, R2m: 0.3489\n"
      ]
     },
     {
@@ -314,7 +314,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 13 轮, 训练损失: 0.0715, 验证损失: 0.1294, 验证 MSE: 0.1305, RMSE: 0.3613, Pearson: 0.6320\n"
+      "第 13 轮, 训练损失: 0.0729, 验证损失: 0.1280, 验证 MSE: 0.1291, RMSE: 0.3594, Pearson: 0.6343, CI: 0.8740, R2m: 0.3747\n"
      ]
     },
     {
@@ -330,7 +330,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 14 轮, 训练损失: 0.0632, 验证损失: 0.1404, 验证 MSE: 0.1406, RMSE: 0.3750, Pearson: 0.6307\n"
+      "第 14 轮, 训练损失: 0.0647, 验证损失: 0.1464, 验证 MSE: 0.1465, RMSE: 0.3827, Pearson: 0.6142, CI: 0.8323, R2m: 0.2908\n"
      ]
     },
     {
@@ -346,7 +346,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 15 轮, 训练损失: 0.0558, 验证损失: 0.1357, 验证 MSE: 0.1367, RMSE: 0.3698, Pearson: 0.6040\n"
+      "第 15 轮, 训练损失: 0.0552, 验证损失: 0.1352, 验证 MSE: 0.1365, RMSE: 0.3695, Pearson: 0.6174, CI: 0.8494, R2m: 0.3390\n"
      ]
     },
     {
@@ -362,7 +362,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 16 轮, 训练损失: 0.0508, 验证损失: 0.1433, 验证 MSE: 0.1445, RMSE: 0.3802, Pearson: 0.6025\n"
+      "第 16 轮, 训练损失: 0.0510, 验证损失: 0.1415, 验证 MSE: 0.1442, RMSE: 0.3797, Pearson: 0.6067, CI: 0.8345, R2m: 0.3017\n"
      ]
     },
     {
@@ -378,7 +378,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 17 轮, 训练损失: 0.0463, 验证损失: 0.1371, 验证 MSE: 0.1379, RMSE: 0.3713, Pearson: 0.6027\n"
+      "第 17 轮, 训练损失: 0.0496, 验证损失: 0.1295, 验证 MSE: 0.1305, RMSE: 0.3613, Pearson: 0.6220, CI: 0.8529, R2m: 0.3679\n"
      ]
     },
     {
@@ -387,15 +387,14 @@
      "text": [
       "第 18/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
-      "/tmp/ipykernel_19/663661782.py:358: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
-      "  model.load_state_dict(torch.load(f\"model_fold_{fold}.pt\"))\n"
+      "                                                     \r"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 18 轮, 训练损失: 0.0433, 验证损失: 0.1432, 验证 MSE: 0.1454, RMSE: 0.3813, Pearson: 0.5906\n",
+      "第 18 轮, 训练损失: 0.0476, 验证损失: 0.1410, 验证 MSE: 0.1431, RMSE: 0.3783, Pearson: 0.5861, CI: 0.8546, R2m: 0.3068\n",
       "在第 18 轮提前停止\n"
      ]
     },
@@ -403,6 +402,8 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
+      "/tmp/ipykernel_18/944441177.py:377: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
+      "  model.load_state_dict(torch.load(f\"model_fold_{fold}.pt\"))\n",
       "/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n"
      ]
@@ -411,7 +412,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 1 折验证 - MSE: 0.1305, RMSE: 0.3613, Pearson: 0.6320\n",
+      "第 1 折验证 - MSE: 0.1291, RMSE: 0.3594, Pearson: 0.6343, CI: 0.8740, R2m: 0.3747\n",
       "\n",
       "=== 第 2/5 折 ===\n"
      ]
@@ -427,7 +428,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 1 轮, 训练损失: 0.2053, 验证损失: 0.1794, 验证 MSE: 0.1792, RMSE: 0.4233, Pearson: 0.4641\n"
+      "第 1 轮, 训练损失: 0.2054, 验证损失: 0.1795, 验证 MSE: 0.1793, RMSE: 0.4235, Pearson: 0.4626, CI: 0.7742, R2m: 0.1238\n"
      ]
     },
     {
@@ -443,7 +444,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 2 轮, 训练损失: 0.1511, 验证损失: 0.1473, 验证 MSE: 0.1475, RMSE: 0.3841, Pearson: 0.5699\n"
+      "第 2 轮, 训练损失: 0.1513, 验证损失: 0.1471, 验证 MSE: 0.1473, RMSE: 0.3838, Pearson: 0.5703, CI: 0.8433, R2m: 0.2802\n"
      ]
     },
     {
@@ -459,7 +460,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 3 轮, 训练损失: 0.1316, 验证损失: 0.1402, 验证 MSE: 0.1406, RMSE: 0.3750, Pearson: 0.5921\n"
+      "第 3 轮, 训练损失: 0.1316, 验证损失: 0.1406, 验证 MSE: 0.1410, RMSE: 0.3755, Pearson: 0.5922, CI: 0.8533, R2m: 0.3110\n"
      ]
     },
     {
@@ -475,7 +476,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 4 轮, 训练损失: 0.1265, 验证损失: 0.1406, 验证 MSE: 0.1409, RMSE: 0.3753, Pearson: 0.5988\n"
+      "第 4 轮, 训练损失: 0.1266, 验证损失: 0.1410, 验证 MSE: 0.1413, RMSE: 0.3759, Pearson: 0.5985, CI: 0.8570, R2m: 0.3098\n"
      ]
     },
     {
@@ -491,7 +492,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 5 轮, 训练损失: 0.1227, 验证损失: 0.1432, 验证 MSE: 0.1435, RMSE: 0.3788, Pearson: 0.6051\n"
+      "第 5 轮, 训练损失: 0.1226, 验证损失: 0.1443, 验证 MSE: 0.1446, RMSE: 0.3802, Pearson: 0.6038, CI: 0.8607, R2m: 0.2937\n"
      ]
     },
     {
@@ -507,7 +508,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 6 轮, 训练损失: 0.1187, 验证损失: 0.1370, 验证 MSE: 0.1373, RMSE: 0.3706, Pearson: 0.6138\n"
+      "第 6 轮, 训练损失: 0.1186, 验证损失: 0.1368, 验证 MSE: 0.1371, RMSE: 0.3703, Pearson: 0.6141, CI: 0.8660, R2m: 0.3302\n"
      ]
     },
     {
@@ -523,7 +524,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 7 轮, 训练损失: 0.1134, 验证损失: 0.1371, 验证 MSE: 0.1373, RMSE: 0.3706, Pearson: 0.6249\n"
+      "第 7 轮, 训练损失: 0.1135, 验证损失: 0.1390, 验证 MSE: 0.1393, RMSE: 0.3732, Pearson: 0.6229, CI: 0.8722, R2m: 0.3196\n"
      ]
     },
     {
@@ -539,7 +540,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 8 轮, 训练损失: 0.1091, 验证损失: 0.1345, 验证 MSE: 0.1345, RMSE: 0.3667, Pearson: 0.6259\n"
+      "第 8 轮, 训练损失: 0.1090, 验证损失: 0.1350, 验证 MSE: 0.1353, RMSE: 0.3678, Pearson: 0.6259, CI: 0.8756, R2m: 0.3390\n"
      ]
     },
     {
@@ -555,7 +556,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 9 轮, 训练损失: 0.1033, 验证损失: 0.1343, 验证 MSE: 0.1339, RMSE: 0.3659, Pearson: 0.6245\n"
+      "第 9 轮, 训练损失: 0.1030, 验证损失: 0.1337, 验证 MSE: 0.1335, RMSE: 0.3653, Pearson: 0.6257, CI: 0.8764, R2m: 0.3480\n"
      ]
     },
     {
@@ -571,7 +572,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 10 轮, 训练损失: 0.0971, 验证损失: 0.1305, 验证 MSE: 0.1301, RMSE: 0.3607, Pearson: 0.6363\n"
+      "第 10 轮, 训练损失: 0.0962, 验证损失: 0.1305, 验证 MSE: 0.1303, RMSE: 0.3609, Pearson: 0.6351, CI: 0.8803, R2m: 0.3635\n"
      ]
     },
     {
@@ -587,7 +588,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 11 轮, 训练损失: 0.0887, 验证损失: 0.1499, 验证 MSE: 0.1493, RMSE: 0.3864, Pearson: 0.6220\n"
+      "第 11 轮, 训练损失: 0.0882, 验证损失: 0.1463, 验证 MSE: 0.1459, RMSE: 0.3819, Pearson: 0.6231, CI: 0.8760, R2m: 0.2873\n"
      ]
     },
     {
@@ -603,7 +604,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 12 轮, 训练损失: 0.0811, 验证损失: 0.1375, 验证 MSE: 0.1364, RMSE: 0.3693, Pearson: 0.6247\n"
+      "第 12 轮, 训练损失: 0.0799, 验证损失: 0.1416, 验证 MSE: 0.1409, RMSE: 0.3754, Pearson: 0.6228, CI: 0.8666, R2m: 0.3115\n"
      ]
     },
     {
@@ -619,7 +620,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 13 轮, 训练损失: 0.0706, 验证损失: 0.1455, 验证 MSE: 0.1450, RMSE: 0.3808, Pearson: 0.6059\n"
+      "第 13 轮, 训练损失: 0.0686, 验证损失: 0.1490, 验证 MSE: 0.1483, RMSE: 0.3851, Pearson: 0.6035, CI: 0.8515, R2m: 0.2752\n"
      ]
     },
     {
@@ -635,7 +636,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 14 轮, 训练损失: 0.0626, 验证损失: 0.1362, 验证 MSE: 0.1348, RMSE: 0.3671, Pearson: 0.6213\n"
+      "第 14 轮, 训练损失: 0.0609, 验证损失: 0.1412, 验证 MSE: 0.1411, RMSE: 0.3756, Pearson: 0.6112, CI: 0.8482, R2m: 0.3107\n"
      ]
     },
     {
@@ -644,15 +645,14 @@
      "text": [
       "第 15/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
-      "/tmp/ipykernel_19/663661782.py:358: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
-      "  model.load_state_dict(torch.load(f\"model_fold_{fold}.pt\"))\n"
+      "                                                     \r"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 15 轮, 训练损失: 0.0548, 验证损失: 0.1346, 验证 MSE: 0.1338, RMSE: 0.3658, Pearson: 0.6172\n",
+      "第 15 轮, 训练损失: 0.0550, 验证损失: 0.1371, 验证 MSE: 0.1361, RMSE: 0.3690, Pearson: 0.6109, CI: 0.8555, R2m: 0.3348\n",
       "在第 15 轮提前停止\n"
      ]
     },
@@ -660,6 +660,8 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
+      "/tmp/ipykernel_18/944441177.py:377: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
+      "  model.load_state_dict(torch.load(f\"model_fold_{fold}.pt\"))\n",
       "/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n"
      ]
@@ -668,7 +670,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 2 折验证 - MSE: 0.1301, RMSE: 0.3607, Pearson: 0.6363\n",
+      "第 2 折验证 - MSE: 0.1303, RMSE: 0.3609, Pearson: 0.6351, CI: 0.8803, R2m: 0.3635\n",
       "\n",
       "=== 第 3/5 折 ===\n"
      ]
@@ -684,7 +686,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 1 轮, 训练损失: 0.1981, 验证损失: 0.1641, 验证 MSE: 0.1651, RMSE: 0.4063, Pearson: 0.4659\n"
+      "第 1 轮, 训练损失: 0.1981, 验证损失: 0.1642, 验证 MSE: 0.1652, RMSE: 0.4064, Pearson: 0.4657, CI: 0.7866, R2m: 0.1946\n"
      ]
     },
     {
@@ -700,7 +702,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 2 轮, 训练损失: 0.1478, 验证损失: 0.1401, 验证 MSE: 0.1411, RMSE: 0.3756, Pearson: 0.5766\n"
+      "第 2 轮, 训练损失: 0.1479, 验证损失: 0.1408, 验证 MSE: 0.1418, RMSE: 0.3766, Pearson: 0.5764, CI: 0.8431, R2m: 0.3085\n"
      ]
     },
     {
@@ -716,7 +718,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 3 轮, 训练损失: 0.1320, 验证损失: 0.1381, 验证 MSE: 0.1395, RMSE: 0.3735, Pearson: 0.5946\n"
+      "第 3 轮, 训练损失: 0.1321, 验证损失: 0.1385, 验证 MSE: 0.1399, RMSE: 0.3741, Pearson: 0.5955, CI: 0.8511, R2m: 0.3178\n"
      ]
     },
     {
@@ -732,7 +734,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 4 轮, 训练损失: 0.1268, 验证损失: 0.1364, 验证 MSE: 0.1378, RMSE: 0.3713, Pearson: 0.6042\n"
+      "第 4 轮, 训练损失: 0.1268, 验证损失: 0.1361, 验证 MSE: 0.1376, RMSE: 0.3710, Pearson: 0.6047, CI: 0.8557, R2m: 0.3291\n"
      ]
     },
     {
@@ -748,7 +750,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 5 轮, 训练损失: 0.1221, 验证损失: 0.1393, 验证 MSE: 0.1410, RMSE: 0.3754, Pearson: 0.6073\n"
+      "第 5 轮, 训练损失: 0.1220, 验证损失: 0.1390, 验证 MSE: 0.1406, RMSE: 0.3750, Pearson: 0.6071, CI: 0.8586, R2m: 0.3144\n"
      ]
     },
     {
@@ -764,7 +766,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 6 轮, 训练损失: 0.1168, 验证损失: 0.1376, 验证 MSE: 0.1391, RMSE: 0.3729, Pearson: 0.6162\n"
+      "第 6 轮, 训练损失: 0.1166, 验证损失: 0.1379, 验证 MSE: 0.1394, RMSE: 0.3733, Pearson: 0.6154, CI: 0.8639, R2m: 0.3205\n"
      ]
     },
     {
@@ -780,7 +782,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 7 轮, 训练损失: 0.1120, 验证损失: 0.1459, 验证 MSE: 0.1477, RMSE: 0.3843, Pearson: 0.6274\n"
+      "第 7 轮, 训练损失: 0.1118, 验证损失: 0.1453, 验证 MSE: 0.1470, RMSE: 0.3834, Pearson: 0.6268, CI: 0.8706, R2m: 0.2833\n"
      ]
     },
     {
@@ -796,7 +798,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 8 轮, 训练损失: 0.1059, 验证损失: 0.1524, 验证 MSE: 0.1542, RMSE: 0.3927, Pearson: 0.6298\n"
+      "第 8 轮, 训练损失: 0.1046, 验证损失: 0.1482, 验证 MSE: 0.1500, RMSE: 0.3873, Pearson: 0.6257, CI: 0.8692, R2m: 0.2688\n"
      ]
     },
     {
@@ -805,15 +807,14 @@
      "text": [
       "第 9/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
-      "/tmp/ipykernel_19/663661782.py:358: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
-      "  model.load_state_dict(torch.load(f\"model_fold_{fold}.pt\"))\n"
+      "                                                     \r"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 9 轮, 训练损失: 0.0957, 验证损失: 0.1441, 验证 MSE: 0.1457, RMSE: 0.3817, Pearson: 0.6231\n",
+      "第 9 轮, 训练损失: 0.0948, 验证损失: 0.1452, 验证 MSE: 0.1470, RMSE: 0.3834, Pearson: 0.6203, CI: 0.8689, R2m: 0.2834\n",
       "在第 9 轮提前停止\n"
      ]
     },
@@ -821,6 +822,8 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
+      "/tmp/ipykernel_18/944441177.py:377: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
+      "  model.load_state_dict(torch.load(f\"model_fold_{fold}.pt\"))\n",
       "/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n"
      ]
@@ -829,7 +832,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 3 折验证 - MSE: 0.1378, RMSE: 0.3713, Pearson: 0.6042\n",
+      "第 3 折验证 - MSE: 0.1376, RMSE: 0.3710, Pearson: 0.6047, CI: 0.8557, R2m: 0.3291\n",
       "\n",
       "=== 第 4/5 折 ===\n"
      ]
@@ -845,7 +848,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 1 轮, 训练损失: 0.2018, 验证损失: 0.1640, 验证 MSE: 0.1624, RMSE: 0.4030, Pearson: 0.4734\n"
+      "第 1 轮, 训练损失: 0.2019, 验证损失: 0.1643, 验证 MSE: 0.1626, RMSE: 0.4033, Pearson: 0.4742, CI: 0.7790, R2m: 0.1835\n"
      ]
     },
     {
@@ -861,7 +864,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 2 轮, 训练损失: 0.1481, 验证损失: 0.1341, 验证 MSE: 0.1326, RMSE: 0.3641, Pearson: 0.5878\n"
+      "第 2 轮, 训练损失: 0.1480, 验证损失: 0.1339, 验证 MSE: 0.1323, RMSE: 0.3638, Pearson: 0.5877, CI: 0.8491, R2m: 0.3355\n"
      ]
     },
     {
@@ -877,7 +880,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 3 轮, 训练损失: 0.1320, 验证损失: 0.1302, 验证 MSE: 0.1283, RMSE: 0.3583, Pearson: 0.6012\n"
+      "第 3 轮, 训练损失: 0.1318, 验证损失: 0.1302, 验证 MSE: 0.1283, RMSE: 0.3582, Pearson: 0.6014, CI: 0.8547, R2m: 0.3558\n"
      ]
     },
     {
@@ -893,7 +896,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 4 轮, 训练损失: 0.1261, 验证损失: 0.1371, 验证 MSE: 0.1351, RMSE: 0.3676, Pearson: 0.6104\n"
+      "第 4 轮, 训练损失: 0.1260, 验证损失: 0.1372, 验证 MSE: 0.1351, RMSE: 0.3676, Pearson: 0.6103, CI: 0.8598, R2m: 0.3216\n"
      ]
     },
     {
@@ -909,7 +912,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 5 轮, 训练损失: 0.1215, 验证损失: 0.1318, 验证 MSE: 0.1295, RMSE: 0.3598, Pearson: 0.6190\n"
+      "第 5 轮, 训练损失: 0.1213, 验证损失: 0.1317, 验证 MSE: 0.1293, RMSE: 0.3597, Pearson: 0.6198, CI: 0.8654, R2m: 0.3506\n"
      ]
     },
     {
@@ -925,7 +928,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 6 轮, 训练损失: 0.1179, 验证损失: 0.1328, 验证 MSE: 0.1306, RMSE: 0.3614, Pearson: 0.6228\n"
+      "第 6 轮, 训练损失: 0.1179, 验证损失: 0.1327, 验证 MSE: 0.1304, RMSE: 0.3611, Pearson: 0.6242, CI: 0.8700, R2m: 0.3452\n"
      ]
     },
     {
@@ -941,7 +944,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 7 轮, 训练损失: 0.1117, 验证损失: 0.1332, 验证 MSE: 0.1312, RMSE: 0.3623, Pearson: 0.6223\n"
+      "第 7 轮, 训练损失: 0.1118, 验证损失: 0.1336, 验证 MSE: 0.1314, RMSE: 0.3624, Pearson: 0.6218, CI: 0.8721, R2m: 0.3405\n"
      ]
     },
     {
@@ -950,15 +953,14 @@
      "text": [
       "第 8/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
-      "/tmp/ipykernel_19/663661782.py:358: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
-      "  model.load_state_dict(torch.load(f\"model_fold_{fold}.pt\"))\n"
+      "                                                     \r"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 8 轮, 训练损失: 0.1082, 验证损失: 0.1308, 验证 MSE: 0.1288, RMSE: 0.3589, Pearson: 0.6367\n",
+      "第 8 轮, 训练损失: 0.1080, 验证损失: 0.1314, 验证 MSE: 0.1294, RMSE: 0.3598, Pearson: 0.6351, CI: 0.8780, R2m: 0.3502\n",
       "在第 8 轮提前停止\n"
      ]
     },
@@ -966,6 +968,8 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
+      "/tmp/ipykernel_18/944441177.py:377: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
+      "  model.load_state_dict(torch.load(f\"model_fold_{fold}.pt\"))\n",
       "/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n"
      ]
@@ -974,7 +978,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 4 折验证 - MSE: 0.1283, RMSE: 0.3583, Pearson: 0.6012\n",
+      "第 4 折验证 - MSE: 0.1283, RMSE: 0.3582, Pearson: 0.6014, CI: 0.8547, R2m: 0.3558\n",
       "\n",
       "=== 第 5/5 折 ===\n"
      ]
@@ -990,7 +994,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 1 轮, 训练损失: 0.2042, 验证损失: 0.1698, 验证 MSE: 0.1705, RMSE: 0.4130, Pearson: 0.4559\n"
+      "第 1 轮, 训练损失: 0.2042, 验证损失: 0.1698, 验证 MSE: 0.1706, RMSE: 0.4130, Pearson: 0.4568, CI: 0.7792, R2m: 0.1689\n"
      ]
     },
     {
@@ -1006,7 +1010,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 2 轮, 训练损失: 0.1468, 验证损失: 0.1454, 验证 MSE: 0.1469, RMSE: 0.3833, Pearson: 0.5768\n"
+      "第 2 轮, 训练损失: 0.1467, 验证损失: 0.1463, 验证 MSE: 0.1477, RMSE: 0.3844, Pearson: 0.5759, CI: 0.8400, R2m: 0.2801\n"
      ]
     },
     {
@@ -1022,7 +1026,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 3 轮, 训练损失: 0.1319, 验证损失: 0.1482, 验证 MSE: 0.1497, RMSE: 0.3869, Pearson: 0.5888\n"
+      "第 3 轮, 训练损失: 0.1320, 验证损失: 0.1477, 验证 MSE: 0.1492, RMSE: 0.3863, Pearson: 0.5895, CI: 0.8466, R2m: 0.2730\n"
      ]
     },
     {
@@ -1038,7 +1042,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 4 轮, 训练损失: 0.1267, 验证损失: 0.1423, 验证 MSE: 0.1436, RMSE: 0.3790, Pearson: 0.6008\n"
+      "第 4 轮, 训练损失: 0.1267, 验证损失: 0.1423, 验证 MSE: 0.1437, RMSE: 0.3790, Pearson: 0.6009, CI: 0.8493, R2m: 0.2999\n"
      ]
     },
     {
@@ -1054,7 +1058,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 5 轮, 训练损失: 0.1228, 验证损失: 0.1388, 验证 MSE: 0.1401, RMSE: 0.3743, Pearson: 0.6034\n"
+      "第 5 轮, 训练损失: 0.1228, 验证损失: 0.1383, 验证 MSE: 0.1395, RMSE: 0.3735, Pearson: 0.6034, CI: 0.8524, R2m: 0.3201\n"
      ]
     },
     {
@@ -1070,7 +1074,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 6 轮, 训练损失: 0.1191, 验证损失: 0.1437, 验证 MSE: 0.1450, RMSE: 0.3808, Pearson: 0.6160\n"
+      "第 6 轮, 训练损失: 0.1193, 验证损失: 0.1449, 验证 MSE: 0.1462, RMSE: 0.3824, Pearson: 0.6142, CI: 0.8566, R2m: 0.2876\n"
      ]
     },
     {
@@ -1086,7 +1090,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 7 轮, 训练损失: 0.1136, 验证损失: 0.1438, 验证 MSE: 0.1452, RMSE: 0.3810, Pearson: 0.6224\n"
+      "第 7 轮, 训练损失: 0.1141, 验证损失: 0.1441, 验证 MSE: 0.1455, RMSE: 0.3815, Pearson: 0.6229, CI: 0.8639, R2m: 0.2909\n"
      ]
     },
     {
@@ -1102,7 +1106,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 8 轮, 训练损失: 0.1092, 验证损失: 0.1347, 验证 MSE: 0.1360, RMSE: 0.3688, Pearson: 0.6320\n"
+      "第 8 轮, 训练损失: 0.1094, 验证损失: 0.1360, 验证 MSE: 0.1374, RMSE: 0.3707, Pearson: 0.6311, CI: 0.8694, R2m: 0.3304\n"
      ]
     },
     {
@@ -1118,7 +1122,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 9 轮, 训练损失: 0.1026, 验证损失: 0.1397, 验证 MSE: 0.1408, RMSE: 0.3753, Pearson: 0.6327\n"
+      "第 9 轮, 训练损失: 0.1032, 验证损失: 0.1383, 验证 MSE: 0.1397, RMSE: 0.3738, Pearson: 0.6332, CI: 0.8726, R2m: 0.3192\n"
      ]
     },
     {
@@ -1134,7 +1138,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 10 轮, 训练损失: 0.0947, 验证损失: 0.1301, 验证 MSE: 0.1313, RMSE: 0.3624, Pearson: 0.6334\n"
+      "第 10 轮, 训练损失: 0.0955, 验证损失: 0.1318, 验证 MSE: 0.1330, RMSE: 0.3646, Pearson: 0.6335, CI: 0.8744, R2m: 0.3521\n"
      ]
     },
     {
@@ -1150,7 +1154,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 11 轮, 训练损失: 0.0861, 验证损失: 0.1333, 验证 MSE: 0.1344, RMSE: 0.3667, Pearson: 0.6348\n"
+      "第 11 轮, 训练损失: 0.0862, 验证损失: 0.1324, 验证 MSE: 0.1337, RMSE: 0.3657, Pearson: 0.6381, CI: 0.8732, R2m: 0.3485\n"
      ]
     },
     {
@@ -1166,7 +1170,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 12 轮, 训练损失: 0.0794, 验证损失: 0.1437, 验证 MSE: 0.1451, RMSE: 0.3810, Pearson: 0.6246\n"
+      "第 12 轮, 训练损失: 0.0806, 验证损失: 0.1416, 验证 MSE: 0.1433, RMSE: 0.3785, Pearson: 0.6303, CI: 0.8683, R2m: 0.3018\n"
      ]
     },
     {
@@ -1182,7 +1186,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 13 轮, 训练损失: 0.0701, 验证损失: 0.1328, 验证 MSE: 0.1342, RMSE: 0.3664, Pearson: 0.6284\n"
+      "第 13 轮, 训练损失: 0.0712, 验证损失: 0.1310, 验证 MSE: 0.1324, RMSE: 0.3639, Pearson: 0.6386, CI: 0.8670, R2m: 0.3546\n"
      ]
     },
     {
@@ -1198,7 +1202,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 14 轮, 训练损失: 0.0626, 验证损失: 0.1352, 验证 MSE: 0.1369, RMSE: 0.3699, Pearson: 0.6226\n"
+      "第 14 轮, 训练损失: 0.0635, 验证损失: 0.1311, 验证 MSE: 0.1326, RMSE: 0.3641, Pearson: 0.6304, CI: 0.8567, R2m: 0.3539\n"
      ]
     },
     {
@@ -1207,22 +1211,6 @@
      "text": [
       "第 15/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
-      "/tmp/ipykernel_19/663661782.py:358: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
-      "  model.load_state_dict(torch.load(f\"model_fold_{fold}.pt\"))\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "第 15 轮, 训练损失: 0.0542, 验证损失: 0.1365, 验证 MSE: 0.1376, RMSE: 0.3710, Pearson: 0.6036\n",
-      "在第 15 轮提前停止\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
       "                                                     \r"
      ]
     },
@@ -1230,10 +1218,27 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 5 折验证 - MSE: 0.1313, RMSE: 0.3624, Pearson: 0.6334\n",
+      "第 15 轮, 训练损失: 0.0555, 验证损失: 0.1382, 验证 MSE: 0.1402, RMSE: 0.3744, Pearson: 0.6237, CI: 0.8424, R2m: 0.3168\n",
+      "在第 15 轮提前停止\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/tmp/ipykernel_18/944441177.py:377: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
+      "  model.load_state_dict(torch.load(f\"model_fold_{fold}.pt\"))\n",
+      "                                                     \r"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "第 5 折验证 - MSE: 0.1330, RMSE: 0.3646, Pearson: 0.6335, CI: 0.8744, R2m: 0.3521\n",
       "\n",
       "=== 5 折验证的平均结果 ===\n",
-      "MSE: 0.1316, RMSE: 0.3628, Pearson: 0.6214\n",
+      "MSE: 0.1317, RMSE: 0.3628, Pearson: 0.6218, CI: 0.8678, R2m: 0.3550\n",
       "\n",
       "=== 测试集上的集成预测 ===\n"
      ]
@@ -1244,131 +1249,124 @@
      "text": [
       "测试模型:   0%|          | 0/5 [00:00<?, ?it/s]\n",
       "评估:   0%|          | 0/41 [00:00<?, ?it/s]\u001b[A\n",
-      "评估:   5%|▍         | 2/41 [00:00<00:02, 14.48it/s]\u001b[A\n",
-      "评估:  10%|▉         | 4/41 [00:00<00:02, 16.64it/s]\u001b[A\n",
-      "评估:  15%|█▍        | 6/41 [00:00<00:02, 17.48it/s]\u001b[A\n",
-      "评估:  20%|█▉        | 8/41 [00:00<00:01, 17.88it/s]\u001b[A\n",
-      "评估:  24%|██▍       | 10/41 [00:00<00:01, 18.12it/s]\u001b[A\n",
-      "评估:  29%|██▉       | 12/41 [00:00<00:01, 18.27it/s]\u001b[A\n",
+      "评估:   5%|▍         | 2/41 [00:00<00:02, 18.47it/s]\u001b[A\n",
+      "评估:  10%|▉         | 4/41 [00:00<00:02, 18.40it/s]\u001b[A\n",
+      "评估:  15%|█▍        | 6/41 [00:00<00:01, 18.38it/s]\u001b[A\n",
+      "评估:  20%|█▉        | 8/41 [00:00<00:01, 18.36it/s]\u001b[A\n",
+      "评估:  24%|██▍       | 10/41 [00:00<00:01, 18.35it/s]\u001b[A\n",
+      "评估:  29%|██▉       | 12/41 [00:00<00:01, 18.36it/s]\u001b[A\n",
+      "评估:  34%|███▍      | 14/41 [00:00<00:01, 18.35it/s]\u001b[A\n",
+      "评估:  39%|███▉      | 16/41 [00:00<00:01, 18.34it/s]\u001b[A\n",
+      "评估:  44%|████▍     | 18/41 [00:00<00:01, 18.31it/s]\u001b[A\n",
+      "评估:  49%|████▉     | 20/41 [00:01<00:01, 18.31it/s]\u001b[A\n",
+      "评估:  54%|█████▎    | 22/41 [00:01<00:01, 18.32it/s]\u001b[A\n",
+      "评估:  59%|█████▊    | 24/41 [00:01<00:00, 18.32it/s]\u001b[A\n",
+      "评估:  63%|██████▎   | 26/41 [00:01<00:00, 18.31it/s]\u001b[A\n",
+      "评估:  68%|██████▊   | 28/41 [00:01<00:00, 18.31it/s]\u001b[A\n",
+      "评估:  73%|███████▎  | 30/41 [00:01<00:00, 18.33it/s]\u001b[A\n",
+      "评估:  78%|███████▊  | 32/41 [00:01<00:00, 18.33it/s]\u001b[A\n",
+      "评估:  83%|████████▎ | 34/41 [00:01<00:00, 18.34it/s]\u001b[A\n",
+      "评估:  88%|████████▊ | 36/41 [00:01<00:00, 18.35it/s]\u001b[A\n",
+      "评估:  93%|█████████▎| 38/41 [00:02<00:00, 18.34it/s]\u001b[A\n",
+      "评估:  98%|█████████▊| 40/41 [00:02<00:00, 18.36it/s]\u001b[A\n",
+      "测试模型:  20%|██        | 1/5 [00:07<00:31,  7.98s/it]\n",
+      "评估:   0%|          | 0/41 [00:00<?, ?it/s]\u001b[A\n",
+      "评估:   5%|▍         | 2/41 [00:00<00:02, 18.49it/s]\u001b[A\n",
+      "评估:  10%|▉         | 4/41 [00:00<00:02, 18.40it/s]\u001b[A\n",
+      "评估:  15%|█▍        | 6/41 [00:00<00:01, 18.36it/s]\u001b[A\n",
+      "评估:  20%|█▉        | 8/41 [00:00<00:01, 18.36it/s]\u001b[A\n",
+      "评估:  24%|██▍       | 10/41 [00:00<00:01, 18.36it/s]\u001b[A\n",
+      "评估:  29%|██▉       | 12/41 [00:00<00:01, 18.37it/s]\u001b[A\n",
       "评估:  34%|███▍      | 14/41 [00:00<00:01, 18.37it/s]\u001b[A\n",
-      "评估:  39%|███▉      | 16/41 [00:00<00:01, 18.44it/s]\u001b[A\n",
-      "评估:  44%|████▍     | 18/41 [00:00<00:01, 18.50it/s]\u001b[A\n",
-      "评估:  49%|████▉     | 20/41 [00:01<00:01, 18.50it/s]\u001b[A\n",
-      "评估:  54%|█████▎    | 22/41 [00:01<00:01, 18.50it/s]\u001b[A\n",
-      "评估:  59%|█████▊    | 24/41 [00:01<00:00, 18.54it/s]\u001b[A\n",
-      "评估:  63%|██████▎   | 26/41 [00:01<00:00, 18.56it/s]\u001b[A\n",
-      "评估:  68%|██████▊   | 28/41 [00:01<00:00, 18.57it/s]\u001b[A\n",
-      "评估:  73%|███████▎  | 30/41 [00:01<00:00, 18.59it/s]\u001b[A\n",
-      "评估:  78%|███████▊  | 32/41 [00:01<00:00, 18.59it/s]\u001b[A\n",
-      "评估:  83%|████████▎ | 34/41 [00:01<00:00, 18.59it/s]\u001b[A\n",
-      "评估:  88%|████████▊ | 36/41 [00:01<00:00, 18.58it/s]\u001b[A\n",
-      "评估:  93%|█████████▎| 38/41 [00:02<00:00, 18.41it/s]\u001b[A\n",
-      "评估:  98%|█████████▊| 40/41 [00:02<00:00, 18.48it/s]\u001b[A\n",
-      "测试模型:  20%|██        | 1/5 [00:02<00:09,  2.27s/it]\n",
+      "评估:  39%|███▉      | 16/41 [00:00<00:01, 18.16it/s]\u001b[A\n",
+      "评估:  44%|████▍     | 18/41 [00:00<00:01, 18.23it/s]\u001b[A\n",
+      "评估:  49%|████▉     | 20/41 [00:01<00:01, 18.26it/s]\u001b[A\n",
+      "评估:  54%|█████▎    | 22/41 [00:01<00:01, 18.28it/s]\u001b[A\n",
+      "评估:  59%|█████▊    | 24/41 [00:01<00:00, 18.30it/s]\u001b[A\n",
+      "评估:  63%|██████▎   | 26/41 [00:01<00:00, 18.32it/s]\u001b[A\n",
+      "评估:  68%|██████▊   | 28/41 [00:01<00:00, 18.33it/s]\u001b[A\n",
+      "评估:  73%|███████▎  | 30/41 [00:01<00:00, 18.34it/s]\u001b[A\n",
+      "评估:  78%|███████▊  | 32/41 [00:01<00:00, 18.31it/s]\u001b[A\n",
+      "评估:  83%|████████▎ | 34/41 [00:01<00:00, 18.29it/s]\u001b[A\n",
+      "评估:  88%|████████▊ | 36/41 [00:01<00:00, 18.31it/s]\u001b[A\n",
+      "评估:  93%|█████████▎| 38/41 [00:02<00:00, 18.33it/s]\u001b[A\n",
+      "评估:  98%|█████████▊| 40/41 [00:02<00:00, 18.34it/s]\u001b[A\n",
+      "测试模型:  40%|████      | 2/5 [00:16<00:25,  8.33s/it]\n",
       "评估:   0%|          | 0/41 [00:00<?, ?it/s]\u001b[A\n",
-      "评估:   5%|▍         | 2/41 [00:00<00:02, 14.59it/s]\u001b[A\n",
-      "评估:  10%|▉         | 4/41 [00:00<00:02, 16.63it/s]\u001b[A\n",
-      "评估:  15%|█▍        | 6/41 [00:00<00:02, 17.43it/s]\u001b[A\n",
-      "评估:  20%|█▉        | 8/41 [00:00<00:01, 17.86it/s]\u001b[A\n",
-      "评估:  24%|██▍       | 10/41 [00:00<00:01, 18.12it/s]\u001b[A\n",
-      "评估:  29%|██▉       | 12/41 [00:00<00:01, 18.27it/s]\u001b[A\n",
-      "评估:  34%|███▍      | 14/41 [00:00<00:01, 18.38it/s]\u001b[A\n",
-      "评估:  39%|███▉      | 16/41 [00:00<00:01, 18.46it/s]\u001b[A\n",
-      "评估:  44%|████▍     | 18/41 [00:00<00:01, 18.49it/s]\u001b[A\n",
-      "评估:  49%|████▉     | 20/41 [00:01<00:01, 18.53it/s]\u001b[A\n",
-      "评估:  54%|█████▎    | 22/41 [00:01<00:01, 18.55it/s]\u001b[A\n",
-      "评估:  59%|█████▊    | 24/41 [00:01<00:00, 18.56it/s]\u001b[A\n",
-      "评估:  63%|██████▎   | 26/41 [00:01<00:00, 18.56it/s]\u001b[A\n",
-      "评估:  68%|██████▊   | 28/41 [00:01<00:00, 18.53it/s]\u001b[A\n",
-      "评估:  73%|███████▎  | 30/41 [00:01<00:00, 18.53it/s]\u001b[A\n",
-      "评估:  78%|███████▊  | 32/41 [00:01<00:00, 18.55it/s]\u001b[A\n",
-      "评估:  83%|████████▎ | 34/41 [00:01<00:00, 18.56it/s]\u001b[A\n",
-      "评估:  88%|████████▊ | 36/41 [00:01<00:00, 18.56it/s]\u001b[A\n",
-      "评估:  93%|█████████▎| 38/41 [00:02<00:00, 18.57it/s]\u001b[A\n",
-      "评估:  98%|█████████▊| 40/41 [00:02<00:00, 18.58it/s]\u001b[A\n",
-      "测试模型:  40%|████      | 2/5 [00:04<00:06,  2.27s/it]\n",
+      "评估:   5%|▍         | 2/41 [00:00<00:02, 18.60it/s]\u001b[A\n",
+      "评估:  10%|▉         | 4/41 [00:00<00:02, 18.46it/s]\u001b[A\n",
+      "评估:  15%|█▍        | 6/41 [00:00<00:01, 18.41it/s]\u001b[A\n",
+      "评估:  20%|█▉        | 8/41 [00:00<00:01, 18.35it/s]\u001b[A\n",
+      "评估:  24%|██▍       | 10/41 [00:00<00:01, 18.34it/s]\u001b[A\n",
+      "评估:  29%|██▉       | 12/41 [00:00<00:01, 18.31it/s]\u001b[A\n",
+      "评估:  34%|███▍      | 14/41 [00:00<00:01, 18.29it/s]\u001b[A\n",
+      "评估:  39%|███▉      | 16/41 [00:00<00:01, 18.29it/s]\u001b[A\n",
+      "评估:  44%|████▍     | 18/41 [00:00<00:01, 18.28it/s]\u001b[A\n",
+      "评估:  49%|████▉     | 20/41 [00:01<00:01, 18.28it/s]\u001b[A\n",
+      "评估:  54%|█████▎    | 22/41 [00:01<00:01, 18.29it/s]\u001b[A\n",
+      "评估:  59%|█████▊    | 24/41 [00:01<00:00, 18.29it/s]\u001b[A\n",
+      "评估:  63%|██████▎   | 26/41 [00:01<00:00, 18.30it/s]\u001b[A\n",
+      "评估:  68%|██████▊   | 28/41 [00:01<00:00, 18.29it/s]\u001b[A\n",
+      "评估:  73%|███████▎  | 30/41 [00:01<00:00, 18.29it/s]\u001b[A\n",
+      "评估:  78%|███████▊  | 32/41 [00:01<00:00, 18.30it/s]\u001b[A\n",
+      "评估:  83%|████████▎ | 34/41 [00:01<00:00, 18.25it/s]\u001b[A\n",
+      "评估:  88%|████████▊ | 36/41 [00:01<00:00, 18.29it/s]\u001b[A\n",
+      "评估:  93%|█████████▎| 38/41 [00:02<00:00, 18.29it/s]\u001b[A\n",
+      "评估:  98%|█████████▊| 40/41 [00:02<00:00, 18.32it/s]\u001b[A\n",
+      "测试模型:  60%|██████    | 3/5 [00:24<00:16,  8.38s/it]\n",
       "评估:   0%|          | 0/41 [00:00<?, ?it/s]\u001b[A\n",
-      "评估:   5%|▍         | 2/41 [00:00<00:02, 15.51it/s]\u001b[A\n",
-      "评估:  10%|▉         | 4/41 [00:00<00:02, 17.17it/s]\u001b[A\n",
-      "评估:  15%|█▍        | 6/41 [00:00<00:01, 17.79it/s]\u001b[A\n",
-      "评估:  20%|█▉        | 8/41 [00:00<00:01, 18.11it/s]\u001b[A\n",
-      "评估:  24%|██▍       | 10/41 [00:00<00:01, 18.26it/s]\u001b[A\n",
-      "评估:  29%|██▉       | 12/41 [00:00<00:01, 18.38it/s]\u001b[A\n",
-      "评估:  34%|███▍      | 14/41 [00:00<00:01, 18.45it/s]\u001b[A\n",
-      "评估:  39%|███▉      | 16/41 [00:00<00:01, 18.50it/s]\u001b[A\n",
-      "评估:  44%|████▍     | 18/41 [00:00<00:01, 18.51it/s]\u001b[A\n",
-      "评估:  49%|████▉     | 20/41 [00:01<00:01, 18.53it/s]\u001b[A\n",
-      "评估:  54%|█████▎    | 22/41 [00:01<00:01, 18.53it/s]\u001b[A\n",
-      "评估:  59%|█████▊    | 24/41 [00:01<00:00, 18.55it/s]\u001b[A\n",
-      "评估:  63%|██████▎   | 26/41 [00:01<00:00, 18.55it/s]\u001b[A\n",
-      "评估:  68%|██████▊   | 28/41 [00:01<00:00, 18.58it/s]\u001b[A\n",
-      "评估:  73%|███████▎  | 30/41 [00:01<00:00, 18.58it/s]\u001b[A\n",
-      "评估:  78%|███████▊  | 32/41 [00:01<00:00, 18.50it/s]\u001b[A\n",
-      "评估:  83%|████████▎ | 34/41 [00:01<00:00, 18.38it/s]\u001b[A\n",
-      "评估:  88%|████████▊ | 36/41 [00:01<00:00, 18.44it/s]\u001b[A\n",
-      "评估:  93%|█████████▎| 38/41 [00:02<00:00, 18.42it/s]\u001b[A\n",
-      "评估:  98%|█████████▊| 40/41 [00:02<00:00, 18.46it/s]\u001b[A\n",
-      "测试模型:  60%|██████    | 3/5 [00:06<00:04,  2.27s/it]\n",
+      "评估:   5%|▍         | 2/41 [00:00<00:02, 18.51it/s]\u001b[A\n",
+      "评估:  10%|▉         | 4/41 [00:00<00:02, 18.41it/s]\u001b[A\n",
+      "评估:  15%|█▍        | 6/41 [00:00<00:01, 18.08it/s]\u001b[A\n",
+      "评估:  20%|█▉        | 8/41 [00:00<00:01, 17.89it/s]\u001b[A\n",
+      "评估:  24%|██▍       | 10/41 [00:00<00:01, 18.05it/s]\u001b[A\n",
+      "评估:  29%|██▉       | 12/41 [00:00<00:01, 18.18it/s]\u001b[A\n",
+      "评估:  34%|███▍      | 14/41 [00:00<00:01, 18.17it/s]\u001b[A\n",
+      "评估:  39%|███▉      | 16/41 [00:00<00:01, 18.09it/s]\u001b[A\n",
+      "评估:  44%|████▍     | 18/41 [00:00<00:01, 18.02it/s]\u001b[A\n",
+      "评估:  49%|████▉     | 20/41 [00:01<00:01, 18.13it/s]\u001b[A\n",
+      "评估:  54%|█████▎    | 22/41 [00:01<00:01, 18.15it/s]\u001b[A\n",
+      "评估:  59%|█████▊    | 24/41 [00:01<00:00, 18.23it/s]\u001b[A\n",
+      "评估:  63%|██████▎   | 26/41 [00:01<00:00, 18.28it/s]\u001b[A\n",
+      "评估:  68%|██████▊   | 28/41 [00:01<00:00, 18.30it/s]\u001b[A\n",
+      "评估:  73%|███████▎  | 30/41 [00:01<00:00, 18.28it/s]\u001b[A\n",
+      "评估:  78%|███████▊  | 32/41 [00:01<00:00, 18.29it/s]\u001b[A\n",
+      "评估:  83%|████████▎ | 34/41 [00:01<00:00, 18.31it/s]\u001b[A\n",
+      "评估:  88%|████████▊ | 36/41 [00:01<00:00, 18.32it/s]\u001b[A\n",
+      "评估:  93%|█████████▎| 38/41 [00:02<00:00, 18.32it/s]\u001b[A\n",
+      "评估:  98%|█████████▊| 40/41 [00:02<00:00, 18.34it/s]\u001b[A\n",
+      "测试模型:  80%|████████  | 4/5 [00:33<00:08,  8.41s/it]\n",
       "评估:   0%|          | 0/41 [00:00<?, ?it/s]\u001b[A\n",
-      "评估:   5%|▍         | 2/41 [00:00<00:02, 14.58it/s]\u001b[A\n",
-      "评估:  10%|▉         | 4/41 [00:00<00:02, 16.63it/s]\u001b[A\n",
-      "评估:  15%|█▍        | 6/41 [00:00<00:02, 17.44it/s]\u001b[A\n",
-      "评估:  20%|█▉        | 8/41 [00:00<00:01, 17.78it/s]\u001b[A\n",
-      "评估:  24%|██▍       | 10/41 [00:00<00:01, 17.95it/s]\u001b[A\n",
-      "评估:  29%|██▉       | 12/41 [00:00<00:01, 18.07it/s]\u001b[A\n",
-      "评估:  34%|███▍      | 14/41 [00:00<00:01, 18.20it/s]\u001b[A\n",
-      "评估:  39%|███▉      | 16/41 [00:00<00:01, 18.22it/s]\u001b[A\n",
-      "评估:  44%|████▍     | 18/41 [00:01<00:01, 18.31it/s]\u001b[A\n",
-      "评估:  49%|████▉     | 20/41 [00:01<00:01, 18.29it/s]\u001b[A\n",
-      "评估:  54%|█████▎    | 22/41 [00:01<00:01, 18.37it/s]\u001b[A\n",
-      "评估:  59%|█████▊    | 24/41 [00:01<00:00, 18.34it/s]\u001b[A\n",
-      "评估:  63%|██████▎   | 26/41 [00:01<00:00, 18.39it/s]\u001b[A\n",
-      "评估:  68%|██████▊   | 28/41 [00:01<00:00, 18.44it/s]\u001b[A\n",
-      "评估:  73%|███████▎  | 30/41 [00:01<00:00, 18.46it/s]\u001b[A\n",
-      "评估:  78%|███████▊  | 32/41 [00:01<00:00, 18.48it/s]\u001b[A\n",
-      "评估:  83%|████████▎ | 34/41 [00:01<00:00, 18.51it/s]\u001b[A\n",
-      "评估:  88%|████████▊ | 36/41 [00:01<00:00, 18.49it/s]\u001b[A\n",
-      "评估:  93%|█████████▎| 38/41 [00:02<00:00, 18.51it/s]\u001b[A\n",
-      "评估:  98%|█████████▊| 40/41 [00:02<00:00, 18.51it/s]\u001b[A\n",
-      "测试模型:  80%|████████  | 4/5 [00:09<00:02,  2.27s/it]\n",
-      "评估:   0%|          | 0/41 [00:00<?, ?it/s]\u001b[A\n",
-      "评估:   5%|▍         | 2/41 [00:00<00:02, 15.44it/s]\u001b[A\n",
-      "评估:  10%|▉         | 4/41 [00:00<00:02, 17.09it/s]\u001b[A\n",
-      "评估:  15%|█▍        | 6/41 [00:00<00:01, 17.75it/s]\u001b[A\n",
-      "评估:  20%|█▉        | 8/41 [00:00<00:01, 18.04it/s]\u001b[A\n",
-      "评估:  24%|██▍       | 10/41 [00:00<00:01, 18.21it/s]\u001b[A\n",
-      "评估:  29%|██▉       | 12/41 [00:00<00:01, 18.33it/s]\u001b[A\n",
-      "评估:  34%|███▍      | 14/41 [00:00<00:01, 18.39it/s]\u001b[A\n",
-      "评估:  39%|███▉      | 16/41 [00:00<00:01, 18.46it/s]\u001b[A\n",
-      "评估:  44%|████▍     | 18/41 [00:00<00:01, 18.51it/s]\u001b[A\n",
-      "评估:  49%|████▉     | 20/41 [00:01<00:01, 18.53it/s]\u001b[A\n",
-      "评估:  54%|█████▎    | 22/41 [00:01<00:01, 18.55it/s]\u001b[A\n",
-      "评估:  59%|█████▊    | 24/41 [00:01<00:00, 18.50it/s]\u001b[A\n",
-      "评估:  63%|██████▎   | 26/41 [00:01<00:00, 18.52it/s]\u001b[A\n",
-      "评估:  68%|██████▊   | 28/41 [00:01<00:00, 18.51it/s]\u001b[A\n",
-      "评估:  73%|███████▎  | 30/41 [00:01<00:00, 18.53it/s]\u001b[A\n",
-      "评估:  78%|███████▊  | 32/41 [00:01<00:00, 18.53it/s]\u001b[A\n",
-      "评估:  83%|████████▎ | 34/41 [00:01<00:00, 18.55it/s]\u001b[A\n",
-      "评估:  88%|████████▊ | 36/41 [00:01<00:00, 18.55it/s]\u001b[A\n",
-      "评估:  93%|█████████▎| 38/41 [00:02<00:00, 18.52it/s]\u001b[A\n",
-      "评估:  98%|█████████▊| 40/41 [00:02<00:00, 18.51it/s]\u001b[A\n",
-      "测试模型: 100%|██████████| 5/5 [00:11<00:00,  2.27s/it]"
+      "评估:   5%|▍         | 2/41 [00:00<00:02, 18.47it/s]\u001b[A\n",
+      "评估:  10%|▉         | 4/41 [00:00<00:02, 18.40it/s]\u001b[A\n",
+      "评估:  15%|█▍        | 6/41 [00:00<00:01, 18.39it/s]\u001b[A\n",
+      "评估:  20%|█▉        | 8/41 [00:00<00:01, 18.39it/s]\u001b[A\n",
+      "评估:  24%|██▍       | 10/41 [00:00<00:01, 18.37it/s]\u001b[A\n",
+      "评估:  29%|██▉       | 12/41 [00:00<00:01, 18.35it/s]\u001b[A\n",
+      "评估:  34%|███▍      | 14/41 [00:00<00:01, 18.34it/s]\u001b[A\n",
+      "评估:  39%|███▉      | 16/41 [00:00<00:01, 18.32it/s]\u001b[A\n",
+      "评估:  44%|████▍     | 18/41 [00:00<00:01, 18.33it/s]\u001b[A\n",
+      "评估:  49%|████▉     | 20/41 [00:01<00:01, 18.32it/s]\u001b[A\n",
+      "评估:  54%|█████▎    | 22/41 [00:01<00:01, 18.32it/s]\u001b[A\n",
+      "评估:  59%|█████▊    | 24/41 [00:01<00:00, 18.32it/s]\u001b[A\n",
+      "评估:  63%|██████▎   | 26/41 [00:01<00:00, 18.32it/s]\u001b[A\n",
+      "评估:  68%|██████▊   | 28/41 [00:01<00:00, 18.32it/s]\u001b[A\n",
+      "评估:  73%|███████▎  | 30/41 [00:01<00:00, 18.32it/s]\u001b[A\n",
+      "评估:  78%|███████▊  | 32/41 [00:01<00:00, 18.33it/s]\u001b[A\n",
+      "评估:  83%|████████▎ | 34/41 [00:01<00:00, 18.30it/s]\u001b[A\n",
+      "评估:  88%|████████▊ | 36/41 [00:01<00:00, 18.28it/s]\u001b[A\n",
+      "评估:  93%|█████████▎| 38/41 [00:02<00:00, 18.14it/s]\u001b[A\n",
+      "评估:  98%|█████████▊| 40/41 [00:02<00:00, 18.19it/s]\u001b[A\n",
+      "测试模型: 100%|██████████| 5/5 [00:41<00:00,  8.37s/it]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "测试集 - MSE: 0.1164, RMSE: 0.3412, Pearson: 0.6691\n",
+      "测试集 - MSE: 0.1165, RMSE: 0.3414, Pearson: 0.6685, CI: 0.8953, R2m: 0.4174\n",
       "\n",
-      "总运行时间: 0小时 37分钟 10.73秒\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "\n"
+      "总运行时间: 0小时 42分钟 37.14秒\n"
      ]
     }
    ],
@@ -1377,7 +1375,7 @@
     "import torch.nn as nn\n",
     "from torch.utils.tensorboard import SummaryWriter\n",
     "from torch.utils.data import Dataset, DataLoader, Subset\n",
-    "from sklearn.metrics import mean_squared_error\n",
+    "from sklearn.metrics import mean_squared_error, r2_score\n",
     "from sklearn.model_selection import KFold, train_test_split\n",
     "import numpy as np\n",
     "import math\n",
@@ -1397,8 +1395,8 @@
     "epochs = 200\n",
     "batch_size = 128\n",
     "k_folds = 5\n",
-    "drug_kernel = [2, 4, 6]\n",
-    "protein_kernel = [2, 4, 6]\n",
+    "drug_kernel = [2,4,6]\n",
+    "protein_kernel = [2,4,6]\n",
     "dropout = 0.5\n",
     "\n",
     "# 加载嵌入\n",
@@ -1417,7 +1415,7 @@
     "attention_dim = conv * 4\n",
     "mix_attention_head = 8\n",
     "\n",
-    "# 双向多头交叉注意力模块\n",
+    "# 双向多头交叉注意力模块（保持不变）\n",
     "class BidirectionalMultiheadCrossAttention(nn.Module):\n",
     "    def __init__(self, embed_dim, num_heads):\n",
     "        super().__init__()\n",
@@ -1487,7 +1485,6 @@
     "\n",
     "        return final_drug_feat, final_protein_feat\n",
     "\n",
-    "\n",
     "class Model(nn.Module):\n",
     "    def __init__(self, drug_embedding, protein_embedding):\n",
     "        super().__init__()\n",
@@ -1549,7 +1546,6 @@
     "\n",
     "        return self.fc(torch.cat([drug_att, protein_att], dim=1)).squeeze()  # 确保输出为一维\n",
     "\n",
-    "\n",
     "class Dataset(Dataset):\n",
     "    def __init__(self, file_path, augment_smiles=True, augment_factor=2, augment_protein=True,\n",
     "                 mutation_rate=0.01, augment_affinity=False, noise_std=0.1):\n",
@@ -1610,7 +1606,21 @@
     "        d, p, y = self.data[idx]\n",
     "        return {'drug_idx': torch.tensor(d), 'protein_idx': torch.tensor(p), 'label': torch.tensor(y, dtype=torch.float)}\n",
     "\n",
+    "# 定义 CI 计算函数\n",
+    "def concordance_index(y_true, y_pred):\n",
+    "    pairs = 0\n",
+    "    concordant = 0\n",
+    "    for i in range(len(y_true)):\n",
+    "        for j in range(i + 1, len(y_true)):\n",
+    "            if y_true[i] != y_true[j]:  # 仅考虑不同的真实值对\n",
+    "                pairs += 1\n",
+    "                if (y_pred[i] > y_pred[j] and y_true[i] > y_true[j]) or (y_pred[i] < y_pred[j] and y_true[i] < y_true[j]):\n",
+    "                    concordant += 1\n",
+    "                elif y_pred[i] == y_pred[j]:\n",
+    "                    concordant += 0.5  # 平局情况计为 0.5\n",
+    "    return concordant / pairs if pairs > 0 else 0\n",
     "\n",
+    "# 修改 evaluate 函数以计算 CI 和 R²m\n",
     "def evaluate(model, loader, return_preds=False):\n",
     "    model.eval()\n",
     "    y_true, y_pred = [], []\n",
@@ -1628,12 +1638,13 @@
     "    mse = mean_squared_error(y_true, y_pred)\n",
     "    rmse = np.sqrt(mse)\n",
     "    pearson = np.corrcoef(y_true, y_pred)[0, 1] if len(y_true) > 1 else 0.0\n",
+    "    ci = concordance_index(y_true, y_pred)  # 添加 CI 计算\n",
+    "    r2m = r2_score(y_true, y_pred)  # 添加 R²m 计算\n",
     "\n",
-    "    metrics = (mse, rmse, pearson)\n",
+    "    metrics = (mse, rmse, pearson, ci, r2m)  # 返回所有指标\n",
     "    if return_preds:\n",
     "        return metrics, y_pred, y_true\n",
     "    return metrics\n",
-    "\n",
     "\n",
     "dataset = Dataset(\"/kaggle/input/davis-n-kiba/Davis.txt\",\n",
     "                  augment_smiles=False,\n",
@@ -1650,7 +1661,7 @@
     "train_indices, test_indices = train_test_split(all_indices, test_size=0.2, random_state=42)\n",
     "test_loader = DataLoader(Subset(dataset, test_indices), batch_size=batch_size, shuffle=False)\n",
     "\n",
-    "# 第二步：在训练集上进行 10 折交叉验证\n",
+    "# 第二步：在训练集上进行 5 折交叉验证\n",
     "kf = KFold(n_splits=k_folds, shuffle=True, random_state=42)\n",
     "fold_results = []\n",
     "models = []\n",
@@ -1705,18 +1716,24 @@
     "\n",
     "        val_loss /= len(val_loader)\n",
     "\n",
-    "        # 计算验证集指标\n",
-    "        (mse, rmse, pearson) = evaluate(model, val_loader)\n",
-    "        print(f\"第 {epoch + 1} 轮, 训练损失: {train_loss:.4f}, 验证损失: {val_loss:.4f}, 验证 MSE: {mse:.4f}, RMSE: {rmse:.4f}, Pearson: {pearson:.4f}\")\n",
+    "        # 计算验证集指标（添加 CI 和 R²m）\n",
+    "        (mse, rmse, pearson, ci, r2m) = evaluate(model, val_loader)\n",
+    "        print(f\"第 {epoch + 1} 轮, 训练损失: {train_loss:.4f}, 验证损失: {val_loss:.4f}, \"\n",
+    "              f\"验证 MSE: {mse:.4f}, RMSE: {rmse:.4f}, Pearson: {pearson:.4f}, CI: {ci:.4f}, R2m: {r2m:.4f}\")\n",
     "\n",
+    "        # 记录到文件\n",
     "        with open(\"process.txt\", \"a\") as f:\n",
-    "            f.write(f\"第 {epoch + 1} 轮, 训练损失: {train_loss:.4f}, 验证损失: {val_loss:.4f}, 验证 MSE: {mse:.4f}, RMSE: {rmse:.4f}, Pearson: {pearson:.4f}\\n\")\n",
+    "            f.write(f\"第 {epoch + 1} 轮, 训练损失: {train_loss:.4f}, 验证损失: {val_loss:.4f}, \"\n",
+    "                    f\"验证 MSE: {mse:.4f}, RMSE: {rmse:.4f}, Pearson: {pearson:.4f}, CI: {ci:.4f}, R2m: {r2m:.4f}\\n\")\n",
     "\n",
+    "        # 记录到 TensorBoard\n",
     "        writer.add_scalar('Loss/train', train_loss, epoch)\n",
     "        writer.add_scalar('Loss/val', val_loss, epoch)\n",
     "        writer.add_scalar('Metrics/mse', mse, epoch)\n",
     "        writer.add_scalar('Metrics/rmse', rmse, epoch)\n",
     "        writer.add_scalar('Metrics/pearson', pearson, epoch)\n",
+    "        writer.add_scalar('Metrics/ci', ci, epoch)\n",
+    "        writer.add_scalar('Metrics/r2m', r2m, epoch)\n",
     "\n",
     "        if val_loss < best_val_loss - 0.001:\n",
     "            best_val_loss = val_loss\n",
@@ -1733,14 +1750,16 @@
     "    model.load_state_dict(torch.load(f\"model_fold_{fold}.pt\"))\n",
     "    models.append(model)\n",
     "\n",
-    "    (mse, rmse, pearson) = evaluate(model, val_loader)\n",
-    "    fold_results.append((mse, rmse, pearson))\n",
-    "    print(f\"第 {fold + 1} 折验证 - MSE: {mse:.4f}, RMSE: {rmse:.4f}, Pearson: {pearson:.4f}\")\n",
+    "    (mse, rmse, pearson, ci, r2m) = evaluate(model, val_loader)\n",
+    "    fold_results.append((mse, rmse, pearson, ci, r2m))\n",
+    "    print(f\"第 {fold + 1} 折验证 - MSE: {mse:.4f}, RMSE: {rmse:.4f}, Pearson: {pearson:.4f}, \"\n",
+    "          f\"CI: {ci:.4f}, R2m: {r2m:.4f}\")\n",
     "\n",
     "# 计算验证集的平均指标\n",
     "avg_val = np.mean(fold_results, axis=0)\n",
     "print(f\"\\n=== {k_folds} 折验证的平均结果 ===\")\n",
-    "print(f\"MSE: {avg_val[0]:.4f}, RMSE: {avg_val[1]:.4f}, Pearson: {avg_val[2]:.4f}\")\n",
+    "print(f\"MSE: {avg_val[0]:.4f}, RMSE: {avg_val[1]:.4f}, Pearson: {avg_val[2]:.4f}, \"\n",
+    "      f\"CI: {avg_val[3]:.4f}, R2m: {avg_val[4]:.4f}\")\n",
     "\n",
     "# 第三步：在测试集上进行集成预测\n",
     "print(\"\\n=== 测试集上的集成预测 ===\")\n",
@@ -1755,12 +1774,14 @@
     "# 计算平均预测值\n",
     "avg_preds = np.mean(preds_list, axis=0)\n",
     "\n",
-    "# 计算测试集指标\n",
+    "# 计算测试集指标（添加 CI 和 R²m）\n",
     "mse = mean_squared_error(y_true, avg_preds)\n",
     "rmse = np.sqrt(mse)\n",
     "pearson = np.corrcoef(y_true, avg_preds)[0, 1]\n",
+    "ci = concordance_index(y_true, avg_preds)\n",
+    "r2m = r2_score(y_true, avg_preds)\n",
     "\n",
-    "print(f\"测试集 - MSE: {mse:.4f}, RMSE: {rmse:.4f}, Pearson: {pearson:.4f}\")\n",
+    "print(f\"测试集 - MSE: {mse:.4f}, RMSE: {rmse:.4f}, Pearson: {pearson:.4f}, CI: {ci:.4f}, R2m: {r2m:.4f}\")\n",
     "\n",
     "# 计算总运行时间\n",
     "total_end_time = time.time()\n",
@@ -1776,10 +1797,14 @@
     "    f.write(f\"MSE: {avg_val[0]:.4f}\\n\")\n",
     "    f.write(f\"RMSE: {avg_val[1]:.4f}\\n\")\n",
     "    f.write(f\"Pearson: {avg_val[2]:.4f}\\n\")\n",
+    "    f.write(f\"CI: {avg_val[3]:.4f}\\n\")\n",
+    "    f.write(f\"R2m: {avg_val[4]:.4f}\\n\")\n",
     "    f.write(\"\\n测试集 (集成预测):\\n\")\n",
     "    f.write(f\"MSE: {mse:.4f}\\n\")\n",
     "    f.write(f\"RMSE: {rmse:.4f}\\n\")\n",
     "    f.write(f\"Pearson: {pearson:.4f}\\n\")\n",
+    "    f.write(f\"CI: {ci:.4f}\\n\")\n",
+    "    f.write(f\"R2m: {r2m:.4f}\\n\")\n",
     "    f.write(f\"\\n总运行时间: {int(hours)}小时 {int(minutes)}分钟 {seconds:.2f}秒\\n\")\n",
     "    f.write(\"=\" * 50 + \"\\n\")"
    ]
@@ -1824,14 +1849,14 @@
   },
   "papermill": {
    "default_parameters": {},
-   "duration": 2274.39325,
-   "end_time": "2025-04-28T14:58:34.424881",
+   "duration": 2601.934456,
+   "end_time": "2025-04-29T03:12:03.478956",
    "environment_variables": {},
    "exception": null,
    "input_path": "__notebook__.ipynb",
    "output_path": "__notebook__.ipynb",
    "parameters": {},
-   "start_time": "2025-04-28T14:20:40.031631",
+   "start_time": "2025-04-29T02:28:41.544500",
    "version": "2.6.0"
   }
  },
