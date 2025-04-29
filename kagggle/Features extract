@@ -3,19 +3,19 @@
   {
    "cell_type": "code",
    "execution_count": 1,
-   "id": "871c8144",
+   "id": "860d75a5",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-04-29T08:32:40.393378Z",
-     "iopub.status.busy": "2025-04-29T08:32:40.393084Z",
-     "iopub.status.idle": "2025-04-29T08:32:46.861423Z",
-     "shell.execute_reply": "2025-04-29T08:32:46.860564Z"
+     "iopub.execute_input": "2025-04-29T10:47:49.209327Z",
+     "iopub.status.busy": "2025-04-29T10:47:49.208580Z",
+     "iopub.status.idle": "2025-04-29T10:47:55.063699Z",
+     "shell.execute_reply": "2025-04-29T10:47:55.062718Z"
     },
     "papermill": {
-     "duration": 6.473729,
-     "end_time": "2025-04-29T08:32:46.863224",
+     "duration": 5.860019,
+     "end_time": "2025-04-29T10:47:55.065360",
      "exception": false,
-     "start_time": "2025-04-29T08:32:40.389495",
+     "start_time": "2025-04-29T10:47:49.205341",
      "status": "completed"
     },
     "tags": []
@@ -41,7 +41,7 @@
       "Requirement already satisfied: intel-cmplr-lib-rt in /usr/local/lib/python3.11/dist-packages (from mkl_umath->numpy->rdkit) (2024.2.0)\r\n",
       "Requirement already satisfied: intel-cmplr-lib-ur==2024.2.0 in /usr/local/lib/python3.11/dist-packages (from intel-openmp<2026,>=2024->mkl->numpy->rdkit) (2024.2.0)\r\n",
       "Downloading rdkit-2024.9.6-cp311-cp311-manylinux_2_28_x86_64.whl (34.3 MB)\r\n",
-      "\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m34.3/34.3 MB\u001b[0m \u001b[31m49.1 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\r\n",
+      "\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m34.3/34.3 MB\u001b[0m \u001b[31m53.0 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\r\n",
       "\u001b[?25hInstalling collected packages: rdkit\r\n",
       "Successfully installed rdkit-2024.9.6\r\n"
      ]
@@ -54,19 +54,19 @@
   {
    "cell_type": "code",
    "execution_count": 2,
-   "id": "932b740a",
+   "id": "eaf57bfe",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-04-29T08:32:46.870950Z",
-     "iopub.status.busy": "2025-04-29T08:32:46.870252Z",
-     "iopub.status.idle": "2025-04-29T09:26:21.899130Z",
-     "shell.execute_reply": "2025-04-29T09:26:21.898292Z"
+     "iopub.execute_input": "2025-04-29T10:47:55.072096Z",
+     "iopub.status.busy": "2025-04-29T10:47:55.071796Z",
+     "iopub.status.idle": "2025-04-29T11:31:00.792185Z",
+     "shell.execute_reply": "2025-04-29T11:31:00.791117Z"
     },
     "papermill": {
-     "duration": 3215.454291,
-     "end_time": "2025-04-29T09:26:22.320460",
+     "duration": 2585.725258,
+     "end_time": "2025-04-29T11:31:00.793367",
      "exception": false,
-     "start_time": "2025-04-29T08:32:46.866169",
+     "start_time": "2025-04-29T10:47:55.068109",
      "status": "completed"
     },
     "tags": []
@@ -76,10 +76,10 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "2025-04-29 08:32:53.025904: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered\n",
+      "2025-04-29 10:48:00.882719: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered\n",
       "WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\n",
-      "E0000 00:00:1745915573.202299      19 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered\n",
-      "E0000 00:00:1745915573.258842      19 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered\n"
+      "E0000 00:00:1745923681.081832      19 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered\n",
+      "E0000 00:00:1745923681.143939      19 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered\n"
      ]
     },
     {
@@ -93,9 +93,9 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "/tmp/ipykernel_19/4211158133.py:30: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
+      "/tmp/ipykernel_19/1781858132.py:31: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
       "  drug_embedding = torch.load(\"/kaggle/input/ligands-n-protein/ligands_davis.pt\").to(device)\n",
-      "/tmp/ipykernel_19/4211158133.py:31: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
+      "/tmp/ipykernel_19/1781858132.py:32: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
       "  protein_embedding = torch.load(\"/kaggle/input/ligands-n-protein/protein_davis.pt\").to(device)\n"
      ]
     },
@@ -126,7 +126,7 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 1/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 1/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.\n",
       "  _warn_prf(average, modifier, msg_start, len(result))\n"
@@ -136,14 +136,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 1 轮, 训练损失: 0.6932, 验证损失: 0.6927, 验证 F1: 0.0000\n"
+      "第 1 轮, 训练损失: 0.6878, 验证损失: 0.6509, 验证 F1: 0.0000\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 2/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 2/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -152,14 +152,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 2 轮, 训练损失: 0.6837, 验证损失: 0.6324, 验证 F1: 0.1247\n"
+      "第 2 轮, 训练损失: 0.5525, 验证损失: 0.4910, 验证 F1: 0.6296\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 3/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 3/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -168,14 +168,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 3 轮, 训练损失: 0.5656, 验证损失: 0.5298, 验证 F1: 0.5803\n"
+      "第 3 轮, 训练损失: 0.4788, 验证损失: 0.4624, 验证 F1: 0.6469\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 4/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 4/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -184,14 +184,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 4 轮, 训练损失: 0.5126, 验证损失: 0.4721, 验证 F1: 0.6384\n"
+      "第 4 轮, 训练损失: 0.4577, 验证损失: 0.4556, 验证 F1: 0.6489\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 5/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 5/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -200,14 +200,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 5 轮, 训练损失: 0.4691, 验证损失: 0.4643, 验证 F1: 0.6630\n"
+      "第 5 轮, 训练损失: 0.4423, 验证损失: 0.4469, 验证 F1: 0.6697\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 6/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 6/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -216,14 +216,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 6 轮, 训练损失: 0.4565, 验证损失: 0.4613, 验证 F1: 0.6611\n"
+      "第 6 轮, 训练损失: 0.4238, 验证损失: 0.4397, 验证 F1: 0.6755\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 7/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 7/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -232,14 +232,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 7 轮, 训练损失: 0.4529, 验证损失: 0.4580, 验证 F1: 0.6589\n"
+      "第 7 轮, 训练损失: 0.4119, 验证损失: 0.4298, 验证 F1: 0.6845\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 8/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 8/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -248,14 +248,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 8 轮, 训练损失: 0.4479, 验证损失: 0.4689, 验证 F1: 0.6020\n"
+      "第 8 轮, 训练损失: 0.3933, 验证损失: 0.4324, 验证 F1: 0.6749\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 9/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 9/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -264,14 +264,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 9 轮, 训练损失: 0.4459, 验证损失: 0.4564, 验证 F1: 0.6292\n"
+      "第 9 轮, 训练损失: 0.3732, 验证损失: 0.4342, 验证 F1: 0.6733\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 10/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 10/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -280,14 +280,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 10 轮, 训练损失: 0.4400, 验证损失: 0.4553, 验证 F1: 0.6138\n"
+      "第 10 轮, 训练损失: 0.3545, 验证损失: 0.4368, 验证 F1: 0.6850\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 11/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 11/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -296,224 +296,16 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 11 轮, 训练损失: 0.4356, 验证损失: 0.4491, 验证 F1: 0.6303\n"
+      "第 11 轮, 训练损失: 0.3322, 验证损失: 0.4594, 验证 F1: 0.6861\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 12/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 12/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
-      "                                                     \r"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "第 12 轮, 训练损失: 0.4314, 验证损失: 0.4481, 验证 F1: 0.6673\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "第 13/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
-      "  warnings.warn(\n",
-      "                                                     \r"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "第 13 轮, 训练损失: 0.4299, 验证损失: 0.4453, 验证 F1: 0.6441\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "第 14/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
-      "  warnings.warn(\n",
-      "                                                     \r"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "第 14 轮, 训练损失: 0.4245, 验证损失: 0.4433, 验证 F1: 0.6673\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "第 15/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
-      "  warnings.warn(\n",
-      "                                                     \r"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "第 15 轮, 训练损失: 0.4173, 验证损失: 0.4350, 验证 F1: 0.6887\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "第 16/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
-      "  warnings.warn(\n",
-      "                                                     \r"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "第 16 轮, 训练损失: 0.4116, 验证损失: 0.4356, 验证 F1: 0.6953\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "第 17/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
-      "  warnings.warn(\n",
-      "                                                     \r"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "第 17 轮, 训练损失: 0.3982, 验证损失: 0.4398, 验证 F1: 0.6460\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "第 18/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
-      "  warnings.warn(\n",
-      "                                                     \r"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "第 18 轮, 训练损失: 0.3899, 验证损失: 0.4332, 验证 F1: 0.6865\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "第 19/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
-      "  warnings.warn(\n",
-      "                                                     \r"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "第 19 轮, 训练损失: 0.3778, 验证损失: 0.4334, 验证 F1: 0.6983\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "第 20/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
-      "  warnings.warn(\n",
-      "                                                     \r"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "第 20 轮, 训练损失: 0.3670, 验证损失: 0.4309, 验证 F1: 0.7255\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "第 21/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
-      "  warnings.warn(\n",
-      "                                                     \r"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "第 21 轮, 训练损失: 0.3507, 验证损失: 0.4379, 验证 F1: 0.7267\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "第 22/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
-      "  warnings.warn(\n",
-      "                                                     \r"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "第 22 轮, 训练损失: 0.3423, 验证损失: 0.4574, 验证 F1: 0.6862\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "第 23/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
-      "  warnings.warn(\n",
-      "                                                     \r"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "第 23 轮, 训练损失: 0.3273, 验证损失: 0.4841, 验证 F1: 0.6913\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "第 24/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
-      "  warnings.warn(\n",
-      "                                                     \r"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "第 24 轮, 训练损失: 0.3173, 验证损失: 0.4332, 验证 F1: 0.6975\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "第 25/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
-      "  warnings.warn(\n",
-      "/tmp/ipykernel_19/4211158133.py:347: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
+      "/tmp/ipykernel_19/1781858132.py:376: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
       "  model.load_state_dict(torch.load(f\"model_fold_{fold}.pt\"))\n"
      ]
     },
@@ -521,8 +313,8 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 25 轮, 训练损失: 0.3057, 验证损失: 0.4660, 验证 F1: 0.6800\n",
-      "在第 25 轮提前停止\n"
+      "第 12 轮, 训练损失: 0.3189, 验证损失: 0.4583, 验证 F1: 0.6689\n",
+      "在第 12 轮提前停止\n"
      ]
     },
     {
@@ -537,7 +329,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 1 折验证 - 准确率: 84.24%, 精确率: 0.7367, 召回率: 0.7146, F1: 0.7255, AUC: 0.8928, PRC: 0.8009\n",
+      "第 1 折验证 - 准确率: 83.10%, 精确率: 0.7507, 召回率: 0.6290, F1: 0.6845, AUC: 0.8811, PRC: 0.7786\n",
       "\n",
       "=== 第 2/5 折 ===\n",
       "正样本: 4711, 负样本: 11782, 比率: 2.50\n"
@@ -547,22 +339,21 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.\n",
-      "  _warn_prf(average, modifier, msg_start, len(result))\n"
+      "                                                     \r"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 1 轮, 训练损失: 0.6919, 验证损失: 0.6819, 验证 F1: 0.0000\n"
+      "第 1 轮, 训练损失: 0.6766, 验证损失: 0.5854, 验证 F1: 0.4117\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 2/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 2/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -571,14 +362,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 2 轮, 训练损失: 0.5343, 验证损失: 0.4306, 验证 F1: 0.6802\n"
+      "第 2 轮, 训练损失: 0.5385, 验证损失: 0.5014, 验证 F1: 0.5838\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 3/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 3/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -587,14 +378,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 3 轮, 训练损失: 0.4295, 验证损失: 0.4041, 验证 F1: 0.6985\n"
+      "第 3 轮, 训练损失: 0.4832, 验证损失: 0.4701, 验证 F1: 0.6363\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 4/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 4/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -603,14 +394,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 4 轮, 训练损失: 0.4038, 验证损失: 0.3912, 验证 F1: 0.6988\n"
+      "第 4 轮, 训练损失: 0.4547, 验证损失: 0.4631, 验证 F1: 0.6345\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 5/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 5/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -619,14 +410,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 5 轮, 训练损失: 0.3929, 验证损失: 0.3813, 验证 F1: 0.7248\n"
+      "第 5 轮, 训练损失: 0.4409, 验证损失: 0.4595, 验证 F1: 0.6403\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 6/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 6/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -635,14 +426,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 6 轮, 训练损失: 0.3831, 验证损失: 0.3793, 验证 F1: 0.7293\n"
+      "第 6 轮, 训练损失: 0.4214, 验证损失: 0.4398, 验证 F1: 0.6756\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 7/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 7/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -651,14 +442,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 7 轮, 训练损失: 0.3767, 验证损失: 0.3755, 验证 F1: 0.7105\n"
+      "第 7 轮, 训练损失: 0.4102, 验证损失: 0.4353, 验证 F1: 0.6576\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 8/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 8/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -667,14 +458,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 8 轮, 训练损失: 0.3702, 验证损失: 0.3759, 验证 F1: 0.7149\n"
+      "第 8 轮, 训练损失: 0.3875, 验证损失: 0.4313, 验证 F1: 0.6909\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 9/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 9/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -683,14 +474,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 9 轮, 训练损失: 0.3646, 验证损失: 0.3741, 验证 F1: 0.7042\n"
+      "第 9 轮, 训练损失: 0.3701, 验证损失: 0.4260, 验证 F1: 0.6955\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 10/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 10/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -699,14 +490,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 10 轮, 训练损失: 0.3596, 验证损失: 0.3721, 验证 F1: 0.7324\n"
+      "第 10 轮, 训练损失: 0.3503, 验证损失: 0.4322, 验证 F1: 0.6827\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 11/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 11/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -715,14 +506,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 11 轮, 训练损失: 0.3512, 验证损失: 0.3697, 验证 F1: 0.7265\n"
+      "第 11 轮, 训练损失: 0.3343, 验证损失: 0.4344, 验证 F1: 0.6995\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 12/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 12/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -731,14 +522,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 12 轮, 训练损失: 0.3400, 验证损失: 0.3767, 验证 F1: 0.7237\n"
+      "第 12 轮, 训练损失: 0.3211, 验证损失: 0.4593, 验证 F1: 0.6756\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 13/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 13/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -747,48 +538,16 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 13 轮, 训练损失: 0.3279, 验证损失: 0.3765, 验证 F1: 0.7354\n"
+      "第 13 轮, 训练损失: 0.3117, 验证损失: 0.4561, 验证 F1: 0.6797\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 14/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 14/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
-      "                                                     \r"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "第 14 轮, 训练损失: 0.3192, 验证损失: 0.3800, 验证 F1: 0.7414\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "第 15/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
-      "  warnings.warn(\n",
-      "                                                     \r"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "第 15 轮, 训练损失: 0.3128, 验证损失: 0.3901, 验证 F1: 0.7369\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "第 16/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
-      "  warnings.warn(\n",
-      "/tmp/ipykernel_19/4211158133.py:347: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
+      "/tmp/ipykernel_19/1781858132.py:376: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
       "  model.load_state_dict(torch.load(f\"model_fold_{fold}.pt\"))\n"
      ]
     },
@@ -796,8 +555,8 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 16 轮, 训练损失: 0.3065, 验证损失: 0.3903, 验证 F1: 0.7374\n",
-      "在第 16 轮提前停止\n"
+      "第 14 轮, 训练损失: 0.2910, 验证损失: 0.4529, 验证 F1: 0.6977\n",
+      "在第 14 轮提前停止\n"
      ]
     },
     {
@@ -812,7 +571,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 2 折验证 - 准确率: 85.67%, 精确率: 0.8035, 召回率: 0.6630, F1: 0.7265, AUC: 0.9151, PRC: 0.8238\n",
+      "第 2 折验证 - 准确率: 83.63%, 精确率: 0.7464, 召回率: 0.6512, F1: 0.6955, AUC: 0.8881, PRC: 0.7844\n",
       "\n",
       "=== 第 3/5 折 ===\n",
       "正样本: 4707, 负样本: 11787, 比率: 2.50\n"
@@ -822,22 +581,21 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.\n",
-      "  _warn_prf(average, modifier, msg_start, len(result))\n"
+      "                                                     \r"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 1 轮, 训练损失: 0.6835, 验证损失: 0.6067, 验证 F1: 0.0000\n"
+      "第 1 轮, 训练损失: 0.6870, 验证损失: 0.6502, 验证 F1: 0.2478\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 2/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 2/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -846,14 +604,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 2 轮, 训练损失: 0.4691, 验证损失: 0.4083, 验证 F1: 0.6979\n"
+      "第 2 轮, 训练损失: 0.5661, 验证损失: 0.5293, 验证 F1: 0.6021\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 3/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 3/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -862,14 +620,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 3 轮, 训练损失: 0.3925, 验证损失: 0.3926, 验证 F1: 0.7254\n"
+      "第 3 轮, 训练损失: 0.4876, 验证损失: 0.4793, 验证 F1: 0.6434\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 4/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 4/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -878,14 +636,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 4 轮, 训练损失: 0.3753, 验证损失: 0.3897, 验证 F1: 0.7171\n"
+      "第 4 轮, 训练损失: 0.4476, 验证损失: 0.4687, 验证 F1: 0.6369\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 5/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 5/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -894,14 +652,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 5 轮, 训练损失: 0.3673, 验证损失: 0.3895, 验证 F1: 0.7100\n"
+      "第 5 轮, 训练损失: 0.4259, 验证损失: 0.4489, 验证 F1: 0.6790\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 6/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 6/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -910,14 +668,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 6 轮, 训练损失: 0.3618, 验证损失: 0.3901, 验证 F1: 0.7191\n"
+      "第 6 轮, 训练损失: 0.4141, 验证损失: 0.4435, 验证 F1: 0.6691\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 7/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 7/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -926,14 +684,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 7 轮, 训练损失: 0.3570, 验证损失: 0.3933, 验证 F1: 0.7096\n"
+      "第 7 轮, 训练损失: 0.3961, 验证损失: 0.4363, 验证 F1: 0.6570\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 8/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 8/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -942,16 +700,112 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 8 轮, 训练损失: 0.3517, 验证损失: 0.3938, 验证 F1: 0.7084\n"
+      "第 8 轮, 训练损失: 0.3784, 验证损失: 0.4308, 验证 F1: 0.6761\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 9/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 9/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
-      "/tmp/ipykernel_19/4211158133.py:347: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
+      "                                                     \r"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "第 9 轮, 训练损失: 0.3674, 验证损失: 0.4281, 验证 F1: 0.6894\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "第 10/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "  warnings.warn(\n",
+      "                                                     \r"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "第 10 轮, 训练损失: 0.3461, 验证损失: 0.4149, 验证 F1: 0.7064\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "第 11/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "  warnings.warn(\n",
+      "                                                     \r"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "第 11 轮, 训练损失: 0.3372, 验证损失: 0.4250, 验证 F1: 0.6975\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "第 12/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "  warnings.warn(\n",
+      "                                                     \r"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "第 12 轮, 训练损失: 0.3237, 验证损失: 0.4450, 验证 F1: 0.7033\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "第 13/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "  warnings.warn(\n",
+      "                                                     \r"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "第 13 轮, 训练损失: 0.3090, 验证损失: 0.4813, 验证 F1: 0.6964\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "第 14/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "  warnings.warn(\n",
+      "                                                     \r"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "第 14 轮, 训练损失: 0.3023, 验证损失: 0.4851, 验证 F1: 0.7020\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "第 15/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "  warnings.warn(\n",
+      "/tmp/ipykernel_19/1781858132.py:376: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
       "  model.load_state_dict(torch.load(f\"model_fold_{fold}.pt\"))\n"
      ]
     },
@@ -959,8 +813,8 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 9 轮, 训练损失: 0.3475, 验证损失: 0.4048, 验证 F1: 0.7149\n",
-      "在第 9 轮提前停止\n"
+      "第 15 轮, 训练损失: 0.2808, 验证损失: 0.4713, 验证 F1: 0.6970\n",
+      "在第 15 轮提前停止\n"
      ]
     },
     {
@@ -975,7 +829,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 3 折验证 - 准确率: 84.50%, 精确率: 0.7563, 召回率: 0.6818, F1: 0.7171, AUC: 0.9046, PRC: 0.8082\n",
+      "第 3 折验证 - 准确率: 83.97%, 精确率: 0.7479, 召回率: 0.6692, F1: 0.7064, AUC: 0.8937, PRC: 0.7966\n",
       "\n",
       "=== 第 4/5 折 ===\n",
       "正样本: 4763, 负样本: 11731, 比率: 2.46\n"
@@ -992,14 +846,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 1 轮, 训练损失: 0.6798, 验证损失: 0.5685, 验证 F1: 0.2431\n"
+      "第 1 轮, 训练损失: 0.6764, 验证损失: 0.5846, 验证 F1: 0.3092\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 2/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 2/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -1008,14 +862,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 2 轮, 训练损失: 0.4493, 验证损失: 0.3946, 验证 F1: 0.7034\n"
+      "第 2 轮, 训练损失: 0.5286, 验证损失: 0.4822, 验证 F1: 0.6260\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 3/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 3/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -1024,14 +878,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 3 轮, 训练损失: 0.3955, 验证损失: 0.3756, 验证 F1: 0.7195\n"
+      "第 3 轮, 训练损失: 0.4585, 验证损失: 0.4518, 验证 F1: 0.6682\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 4/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 4/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -1040,14 +894,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 4 轮, 训练损失: 0.3808, 验证损失: 0.3747, 验证 F1: 0.7271\n"
+      "第 4 轮, 训练损失: 0.4266, 验证损失: 0.4355, 验证 F1: 0.6689\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 5/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 5/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -1056,14 +910,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 5 轮, 训练损失: 0.3710, 验证损失: 0.3766, 验证 F1: 0.7253\n"
+      "第 5 轮, 训练损失: 0.4043, 验证损失: 0.4258, 验证 F1: 0.6759\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 6/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 6/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -1072,14 +926,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 6 轮, 训练损失: 0.3644, 验证损失: 0.3727, 验证 F1: 0.7308\n"
+      "第 6 轮, 训练损失: 0.3883, 验证损失: 0.4199, 验证 F1: 0.6943\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 7/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 7/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -1088,14 +942,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 7 轮, 训练损失: 0.3639, 验证损失: 0.3685, 验证 F1: 0.7101\n"
+      "第 7 轮, 训练损失: 0.3678, 验证损失: 0.4234, 验证 F1: 0.6850\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 8/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 8/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -1104,14 +958,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 8 轮, 训练损失: 0.3574, 验证损失: 0.3664, 验证 F1: 0.7288\n"
+      "第 8 轮, 训练损失: 0.3559, 验证损失: 0.4184, 验证 F1: 0.6949\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 9/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 9/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -1120,14 +974,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 9 轮, 训练损失: 0.3518, 验证损失: 0.3665, 验证 F1: 0.7279\n"
+      "第 9 轮, 训练损失: 0.3468, 验证损失: 0.4111, 验证 F1: 0.7097\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 10/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 10/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -1136,14 +990,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 10 轮, 训练损失: 0.3444, 验证损失: 0.3626, 验证 F1: 0.7291\n"
+      "第 10 轮, 训练损失: 0.3383, 验证损失: 0.4010, 验证 F1: 0.7065\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 11/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 11/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -1152,14 +1006,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 11 轮, 训练损失: 0.3361, 验证损失: 0.3696, 验证 F1: 0.7001\n"
+      "第 11 轮, 训练损失: 0.3217, 验证损失: 0.4163, 验证 F1: 0.7060\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 12/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 12/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -1168,14 +1022,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 12 轮, 训练损失: 0.3289, 验证损失: 0.3616, 验证 F1: 0.7199\n"
+      "第 12 轮, 训练损失: 0.3118, 验证损失: 0.4169, 验证 F1: 0.7062\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 13/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 13/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -1184,14 +1038,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 13 轮, 训练损失: 0.3233, 验证损失: 0.3685, 验证 F1: 0.7237\n"
+      "第 13 轮, 训练损失: 0.3033, 验证损失: 0.4349, 验证 F1: 0.6997\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 14/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 14/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -1200,48 +1054,16 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 14 轮, 训练损失: 0.3212, 验证损失: 0.3692, 验证 F1: 0.7139\n"
+      "第 14 轮, 训练损失: 0.2926, 验证损失: 0.4289, 验证 F1: 0.7069\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 15/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 15/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
-      "                                                     \r"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "第 15 轮, 训练损失: 0.3185, 验证损失: 0.3881, 验证 F1: 0.7203\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "第 16/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
-      "  warnings.warn(\n",
-      "                                                     \r"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "第 16 轮, 训练损失: 0.3141, 验证损失: 0.3799, 验证 F1: 0.7225\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "第 17/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
-      "  warnings.warn(\n",
-      "/tmp/ipykernel_19/4211158133.py:347: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
+      "/tmp/ipykernel_19/1781858132.py:376: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
       "  model.load_state_dict(torch.load(f\"model_fold_{fold}.pt\"))\n"
      ]
     },
@@ -1249,8 +1071,8 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 17 轮, 训练损失: 0.3125, 验证损失: 0.3867, 验证 F1: 0.7093\n",
-      "在第 17 轮提前停止\n"
+      "第 15 轮, 训练损失: 0.2883, 验证损失: 0.4343, 验证 F1: 0.7097\n",
+      "在第 15 轮提前停止\n"
      ]
     },
     {
@@ -1265,7 +1087,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 4 折验证 - 准确率: 85.71%, 精确率: 0.7796, 召回率: 0.6687, F1: 0.7199, AUC: 0.9201, PRC: 0.8303\n",
+      "第 4 折验证 - 准确率: 84.87%, 精确率: 0.7555, 召回率: 0.6634, F1: 0.7065, AUC: 0.9046, PRC: 0.8082\n",
       "\n",
       "=== 第 5/5 折 ===\n",
       "正样本: 4706, 负样本: 11788, 比率: 2.50\n"
@@ -1283,14 +1105,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 1 轮, 训练损失: 0.6872, 验证损失: 0.6252, 验证 F1: 0.0000\n"
+      "第 1 轮, 训练损失: 0.6879, 验证损失: 0.6530, 验证 F1: 0.0000\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 2/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 2/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -1299,14 +1121,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 2 轮, 训练损失: 0.4615, 验证损失: 0.4058, 验证 F1: 0.7068\n"
+      "第 2 轮, 训练损失: 0.5414, 验证损失: 0.4940, 验证 F1: 0.6539\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 3/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 3/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -1315,14 +1137,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 3 轮, 训练损失: 0.3844, 验证损失: 0.3849, 验证 F1: 0.7290\n"
+      "第 3 轮, 训练损失: 0.4581, 验证损失: 0.4668, 验证 F1: 0.6581\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 4/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 4/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -1331,14 +1153,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 4 轮, 训练损失: 0.3697, 验证损失: 0.3772, 验证 F1: 0.7208\n"
+      "第 4 轮, 训练损失: 0.4324, 验证损失: 0.4445, 验证 F1: 0.6791\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 5/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 5/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -1347,14 +1169,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 5 轮, 训练损失: 0.3594, 验证损失: 0.3759, 验证 F1: 0.7192\n"
+      "第 5 轮, 训练损失: 0.4050, 验证损失: 0.4313, 验证 F1: 0.6691\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 6/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 6/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -1363,14 +1185,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 6 轮, 训练损失: 0.3541, 验证损失: 0.3783, 验证 F1: 0.7306\n"
+      "第 6 轮, 训练损失: 0.3879, 验证损失: 0.4184, 验证 F1: 0.7038\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 7/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 7/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -1379,14 +1201,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 7 轮, 训练损失: 0.3479, 验证损失: 0.3767, 验证 F1: 0.7296\n"
+      "第 7 轮, 训练损失: 0.3695, 验证损失: 0.4206, 验证 F1: 0.7030\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 8/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 8/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -1395,14 +1217,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 8 轮, 训练损失: 0.3432, 验证损失: 0.3787, 验证 F1: 0.7337\n"
+      "第 8 轮, 训练损失: 0.3536, 验证损失: 0.4226, 验证 F1: 0.7094\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 9/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 9/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
       "                                                     \r"
      ]
@@ -1411,16 +1233,32 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 9 轮, 训练损失: 0.3356, 验证损失: 0.3753, 验证 F1: 0.7389\n"
+      "第 9 轮, 训练损失: 0.3464, 验证损失: 0.4237, 验证 F1: 0.7128\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "第 10/200 轮 训练:   0%|          | 0/258 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "第 10/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
       "  warnings.warn(\n",
-      "/tmp/ipykernel_19/4211158133.py:347: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
+      "                                                     \r"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "第 10 轮, 训练损失: 0.3306, 验证损失: 0.4308, 验证 F1: 0.7240\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "第 11/200 轮 训练:   0%|          | 0/129 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.\n",
+      "  warnings.warn(\n",
+      "/tmp/ipykernel_19/1781858132.py:376: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n",
       "  model.load_state_dict(torch.load(f\"model_fold_{fold}.pt\"))\n"
      ]
     },
@@ -1428,8 +1266,8 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 10 轮, 训练损失: 0.3253, 验证损失: 0.3775, 验证 F1: 0.7431\n",
-      "在第 10 轮提前停止\n"
+      "第 11 轮, 训练损失: 0.3237, 验证损失: 0.4385, 验证 F1: 0.7027\n",
+      "在第 11 轮提前停止\n"
      ]
     },
     {
@@ -1443,10 +1281,10 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "第 5 折验证 - 准确率: 85.20%, 精确率: 0.7945, 召回率: 0.6569, F1: 0.7192, AUC: 0.9115, PRC: 0.8305\n",
+      "第 5 折验证 - 准确率: 83.39%, 精确率: 0.7242, 召回率: 0.6846, F1: 0.7038, AUC: 0.8884, PRC: 0.8008\n",
       "\n",
       "=== 5 折验证的平均结果 ===\n",
-      "准确率: 85.07%, 精确率: 0.7741, 召回率: 0.6770, F1: 0.7216, AUC: 0.9088, PRC: 0.8188\n",
+      "准确率: 83.79%, 精确率: 0.7449, 召回率: 0.6595, F1: 0.6993, AUC: 0.8912, PRC: 0.7937\n",
       "\n",
       "=== 测试集上的集成预测 ===\n"
      ]
@@ -1456,105 +1294,125 @@
      "output_type": "stream",
      "text": [
       "测试模型:   0%|          | 0/5 [00:00<?, ?it/s]\n",
-      "评估:   0%|          | 0/81 [00:00<?, ?it/s]\u001b[A\n",
-      "评估:   6%|▌         | 5/81 [00:00<00:01, 40.77it/s]\u001b[A\n",
-      "评估:  12%|█▏        | 10/81 [00:00<00:01, 40.57it/s]\u001b[A\n",
-      "评估:  19%|█▊        | 15/81 [00:00<00:01, 40.46it/s]\u001b[A\n",
-      "评估:  25%|██▍       | 20/81 [00:00<00:01, 40.34it/s]\u001b[A\n",
-      "评估:  31%|███       | 25/81 [00:00<00:01, 40.34it/s]\u001b[A\n",
-      "评估:  37%|███▋      | 30/81 [00:00<00:01, 40.39it/s]\u001b[A\n",
-      "评估:  43%|████▎     | 35/81 [00:00<00:01, 40.41it/s]\u001b[A\n",
-      "评估:  49%|████▉     | 40/81 [00:00<00:01, 40.46it/s]\u001b[A\n",
-      "评估:  56%|█████▌    | 45/81 [00:01<00:00, 40.48it/s]\u001b[A\n",
-      "评估:  62%|██████▏   | 50/81 [00:01<00:00, 40.49it/s]\u001b[A\n",
-      "评估:  68%|██████▊   | 55/81 [00:01<00:00, 40.48it/s]\u001b[A\n",
-      "评估:  74%|███████▍  | 60/81 [00:01<00:00, 40.49it/s]\u001b[A\n",
-      "评估:  80%|████████  | 65/81 [00:01<00:00, 40.48it/s]\u001b[A\n",
-      "评估:  86%|████████▋ | 70/81 [00:01<00:00, 40.52it/s]\u001b[A\n",
-      "评估:  93%|█████████▎| 75/81 [00:01<00:00, 40.48it/s]\u001b[A\n",
-      "评估:  99%|█████████▉| 80/81 [00:01<00:00, 40.48it/s]\u001b[A\n",
-      "测试模型:  20%|██        | 1/5 [00:02<00:08,  2.03s/it]\n",
-      "评估:   0%|          | 0/81 [00:00<?, ?it/s]\u001b[A\n",
-      "评估:   6%|▌         | 5/81 [00:00<00:01, 40.87it/s]\u001b[A\n",
-      "评估:  12%|█▏        | 10/81 [00:00<00:01, 40.38it/s]\u001b[A\n",
-      "评估:  19%|█▊        | 15/81 [00:00<00:01, 40.40it/s]\u001b[A\n",
-      "评估:  25%|██▍       | 20/81 [00:00<00:01, 40.43it/s]\u001b[A\n",
-      "评估:  31%|███       | 25/81 [00:00<00:01, 40.43it/s]\u001b[A\n",
-      "评估:  37%|███▋      | 30/81 [00:00<00:01, 40.47it/s]\u001b[A\n",
-      "评估:  43%|████▎     | 35/81 [00:00<00:01, 40.40it/s]\u001b[A\n",
-      "评估:  49%|████▉     | 40/81 [00:00<00:01, 40.25it/s]\u001b[A\n",
-      "评估:  56%|█████▌    | 45/81 [00:01<00:00, 40.21it/s]\u001b[A\n",
-      "评估:  62%|██████▏   | 50/81 [00:01<00:00, 40.22it/s]\u001b[A\n",
-      "评估:  68%|██████▊   | 55/81 [00:01<00:00, 40.19it/s]\u001b[A\n",
-      "评估:  74%|███████▍  | 60/81 [00:01<00:00, 40.19it/s]\u001b[A\n",
-      "评估:  80%|████████  | 65/81 [00:01<00:00, 40.15it/s]\u001b[A\n",
-      "评估:  86%|████████▋ | 70/81 [00:01<00:00, 40.25it/s]\u001b[A\n",
-      "评估:  93%|█████████▎| 75/81 [00:01<00:00, 40.27it/s]\u001b[A\n",
-      "评估:  99%|█████████▉| 80/81 [00:01<00:00, 40.34it/s]\u001b[A\n",
-      "测试模型:  40%|████      | 2/5 [00:04<00:06,  2.04s/it]\n",
-      "评估:   0%|          | 0/81 [00:00<?, ?it/s]\u001b[A\n",
-      "评估:   6%|▌         | 5/81 [00:00<00:01, 40.93it/s]\u001b[A\n",
-      "评估:  12%|█▏        | 10/81 [00:00<00:01, 40.52it/s]\u001b[A\n",
-      "评估:  19%|█▊        | 15/81 [00:00<00:01, 40.41it/s]\u001b[A\n",
-      "评估:  25%|██▍       | 20/81 [00:00<00:01, 40.42it/s]\u001b[A\n",
-      "评估:  31%|███       | 25/81 [00:00<00:01, 40.42it/s]\u001b[A\n",
-      "评估:  37%|███▋      | 30/81 [00:00<00:01, 40.36it/s]\u001b[A\n",
-      "评估:  43%|████▎     | 35/81 [00:00<00:01, 40.32it/s]\u001b[A\n",
-      "评估:  49%|████▉     | 40/81 [00:00<00:01, 40.31it/s]\u001b[A\n",
-      "评估:  56%|█████▌    | 45/81 [00:01<00:00, 40.32it/s]\u001b[A\n",
-      "评估:  62%|██████▏   | 50/81 [00:01<00:00, 40.33it/s]\u001b[A\n",
-      "评估:  68%|██████▊   | 55/81 [00:01<00:00, 40.28it/s]\u001b[A\n",
-      "评估:  74%|███████▍  | 60/81 [00:01<00:00, 40.25it/s]\u001b[A\n",
-      "评估:  80%|████████  | 65/81 [00:01<00:00, 40.25it/s]\u001b[A\n",
-      "评估:  86%|████████▋ | 70/81 [00:01<00:00, 40.27it/s]\u001b[A\n",
-      "评估:  93%|█████████▎| 75/81 [00:01<00:00, 40.34it/s]\u001b[A\n",
-      "评估:  99%|█████████▉| 80/81 [00:01<00:00, 40.40it/s]\u001b[A\n",
-      "测试模型:  60%|██████    | 3/5 [00:06<00:04,  2.04s/it]\n",
-      "评估:   0%|          | 0/81 [00:00<?, ?it/s]\u001b[A\n",
-      "评估:   6%|▌         | 5/81 [00:00<00:01, 41.00it/s]\u001b[A\n",
-      "评估:  12%|█▏        | 10/81 [00:00<00:01, 40.50it/s]\u001b[A\n",
-      "评估:  19%|█▊        | 15/81 [00:00<00:01, 40.45it/s]\u001b[A\n",
-      "评估:  25%|██▍       | 20/81 [00:00<00:01, 40.47it/s]\u001b[A\n",
-      "评估:  31%|███       | 25/81 [00:00<00:01, 40.43it/s]\u001b[A\n",
-      "评估:  37%|███▋      | 30/81 [00:00<00:01, 40.42it/s]\u001b[A\n",
-      "评估:  43%|████▎     | 35/81 [00:00<00:01, 40.44it/s]\u001b[A\n",
-      "评估:  49%|████▉     | 40/81 [00:00<00:01, 40.47it/s]\u001b[A\n",
-      "评估:  56%|█████▌    | 45/81 [00:01<00:00, 40.47it/s]\u001b[A\n",
-      "评估:  62%|██████▏   | 50/81 [00:01<00:00, 40.46it/s]\u001b[A\n",
-      "评估:  68%|██████▊   | 55/81 [00:01<00:00, 40.40it/s]\u001b[A\n",
-      "评估:  74%|███████▍  | 60/81 [00:01<00:00, 40.41it/s]\u001b[A\n",
-      "评估:  80%|████████  | 65/81 [00:01<00:00, 40.43it/s]\u001b[A\n",
-      "评估:  86%|████████▋ | 70/81 [00:01<00:00, 40.47it/s]\u001b[A\n",
-      "评估:  93%|█████████▎| 75/81 [00:01<00:00, 40.43it/s]\u001b[A\n",
-      "评估:  99%|█████████▉| 80/81 [00:01<00:00, 40.45it/s]\u001b[A\n",
-      "测试模型:  80%|████████  | 4/5 [00:08<00:02,  2.04s/it]\n",
-      "评估:   0%|          | 0/81 [00:00<?, ?it/s]\u001b[A\n",
-      "评估:   6%|▌         | 5/81 [00:00<00:01, 40.86it/s]\u001b[A\n",
-      "评估:  12%|█▏        | 10/81 [00:00<00:01, 40.57it/s]\u001b[A\n",
-      "评估:  19%|█▊        | 15/81 [00:00<00:01, 40.43it/s]\u001b[A\n",
-      "评估:  25%|██▍       | 20/81 [00:00<00:01, 40.33it/s]\u001b[A\n",
-      "评估:  31%|███       | 25/81 [00:00<00:01, 40.35it/s]\u001b[A\n",
-      "评估:  37%|███▋      | 30/81 [00:00<00:01, 40.42it/s]\u001b[A\n",
-      "评估:  43%|████▎     | 35/81 [00:00<00:01, 40.45it/s]\u001b[A\n",
-      "评估:  49%|████▉     | 40/81 [00:00<00:01, 40.49it/s]\u001b[A\n",
-      "评估:  56%|█████▌    | 45/81 [00:01<00:00, 40.47it/s]\u001b[A\n",
-      "评估:  62%|██████▏   | 50/81 [00:01<00:00, 40.48it/s]\u001b[A\n",
-      "评估:  68%|██████▊   | 55/81 [00:01<00:00, 40.34it/s]\u001b[A\n",
-      "评估:  74%|███████▍  | 60/81 [00:01<00:00, 39.92it/s]\u001b[A\n",
-      "评估:  79%|███████▉  | 64/81 [00:01<00:00, 39.90it/s]\u001b[A\n",
-      "评估:  85%|████████▌ | 69/81 [00:01<00:00, 40.08it/s]\u001b[A\n",
-      "评估:  91%|█████████▏| 74/81 [00:01<00:00, 40.20it/s]\u001b[A\n",
-      "评估:  98%|█████████▊| 79/81 [00:01<00:00, 40.29it/s]\u001b[A\n",
-      "测试模型: 100%|██████████| 5/5 [00:10<00:00,  2.04s/it]"
+      "评估:   0%|          | 0/41 [00:00<?, ?it/s]\u001b[A\n",
+      "评估:   5%|▍         | 2/41 [00:00<00:03, 12.86it/s]\u001b[A\n",
+      "评估:  10%|▉         | 4/41 [00:00<00:02, 13.91it/s]\u001b[A\n",
+      "评估:  15%|█▍        | 6/41 [00:00<00:02, 14.47it/s]\u001b[A\n",
+      "评估:  20%|█▉        | 8/41 [00:00<00:02, 14.60it/s]\u001b[A\n",
+      "评估:  24%|██▍       | 10/41 [00:00<00:02, 14.75it/s]\u001b[A\n",
+      "评估:  29%|██▉       | 12/41 [00:00<00:01, 14.84it/s]\u001b[A\n",
+      "评估:  34%|███▍      | 14/41 [00:00<00:01, 14.91it/s]\u001b[A\n",
+      "评估:  39%|███▉      | 16/41 [00:01<00:01, 14.95it/s]\u001b[A\n",
+      "评估:  44%|████▍     | 18/41 [00:01<00:01, 14.99it/s]\u001b[A\n",
+      "评估:  49%|████▉     | 20/41 [00:01<00:01, 15.03it/s]\u001b[A\n",
+      "评估:  54%|█████▎    | 22/41 [00:01<00:01, 15.04it/s]\u001b[A\n",
+      "评估:  59%|█████▊    | 24/41 [00:01<00:01, 15.02it/s]\u001b[A\n",
+      "评估:  63%|██████▎   | 26/41 [00:01<00:00, 15.03it/s]\u001b[A\n",
+      "评估:  68%|██████▊   | 28/41 [00:01<00:00, 15.05it/s]\u001b[A\n",
+      "评估:  73%|███████▎  | 30/41 [00:02<00:00, 15.06it/s]\u001b[A\n",
+      "评估:  78%|███████▊  | 32/41 [00:02<00:00, 15.08it/s]\u001b[A\n",
+      "评估:  83%|████████▎ | 34/41 [00:02<00:00, 15.08it/s]\u001b[A\n",
+      "评估:  88%|████████▊ | 36/41 [00:02<00:00, 15.06it/s]\u001b[A\n",
+      "评估:  93%|█████████▎| 38/41 [00:02<00:00, 15.07it/s]\u001b[A\n",
+      "评估:  98%|█████████▊| 40/41 [00:02<00:00, 15.08it/s]\u001b[A\n",
+      "测试模型:  20%|██        | 1/5 [00:02<00:11,  2.79s/it]\n",
+      "评估:   0%|          | 0/41 [00:00<?, ?it/s]\u001b[A\n",
+      "评估:   5%|▍         | 2/41 [00:00<00:02, 14.66it/s]\u001b[A\n",
+      "评估:  10%|▉         | 4/41 [00:00<00:02, 14.92it/s]\u001b[A\n",
+      "评估:  15%|█▍        | 6/41 [00:00<00:02, 15.00it/s]\u001b[A\n",
+      "评估:  20%|█▉        | 8/41 [00:00<00:02, 14.97it/s]\u001b[A\n",
+      "评估:  24%|██▍       | 10/41 [00:00<00:02, 15.02it/s]\u001b[A\n",
+      "评估:  29%|██▉       | 12/41 [00:00<00:01, 15.04it/s]\u001b[A\n",
+      "评估:  34%|███▍      | 14/41 [00:00<00:01, 15.06it/s]\u001b[A\n",
+      "评估:  39%|███▉      | 16/41 [00:01<00:01, 15.08it/s]\u001b[A\n",
+      "评估:  44%|████▍     | 18/41 [00:01<00:01, 15.09it/s]\u001b[A\n",
+      "评估:  49%|████▉     | 20/41 [00:01<00:01, 15.08it/s]\u001b[A\n",
+      "评估:  54%|█████▎    | 22/41 [00:01<00:01, 14.96it/s]\u001b[A\n",
+      "评估:  59%|█████▊    | 24/41 [00:01<00:01, 15.02it/s]\u001b[A\n",
+      "评估:  63%|██████▎   | 26/41 [00:01<00:00, 15.06it/s]\u001b[A\n",
+      "评估:  68%|██████▊   | 28/41 [00:01<00:00, 15.08it/s]\u001b[A\n",
+      "评估:  73%|███████▎  | 30/41 [00:01<00:00, 15.09it/s]\u001b[A\n",
+      "评估:  78%|███████▊  | 32/41 [00:02<00:00, 15.10it/s]\u001b[A\n",
+      "评估:  83%|████████▎ | 34/41 [00:02<00:00, 15.11it/s]\u001b[A\n",
+      "评估:  88%|████████▊ | 36/41 [00:02<00:00, 15.11it/s]\u001b[A\n",
+      "评估:  93%|█████████▎| 38/41 [00:02<00:00, 15.12it/s]\u001b[A\n",
+      "评估:  98%|█████████▊| 40/41 [00:02<00:00, 15.13it/s]\u001b[A\n",
+      "测试模型:  40%|████      | 2/5 [00:05<00:08,  2.77s/it]\n",
+      "评估:   0%|          | 0/41 [00:00<?, ?it/s]\u001b[A\n",
+      "评估:   5%|▍         | 2/41 [00:00<00:02, 14.76it/s]\u001b[A\n",
+      "评估:  10%|▉         | 4/41 [00:00<00:02, 14.98it/s]\u001b[A\n",
+      "评估:  15%|█▍        | 6/41 [00:00<00:02, 15.01it/s]\u001b[A\n",
+      "评估:  20%|█▉        | 8/41 [00:00<00:02, 14.97it/s]\u001b[A\n",
+      "评估:  24%|██▍       | 10/41 [00:00<00:02, 15.00it/s]\u001b[A\n",
+      "评估:  29%|██▉       | 12/41 [00:00<00:01, 14.99it/s]\u001b[A\n",
+      "评估:  34%|███▍      | 14/41 [00:00<00:01, 15.00it/s]\u001b[A\n",
+      "评估:  39%|███▉      | 16/41 [00:01<00:01, 15.04it/s]\u001b[A\n",
+      "评估:  44%|████▍     | 18/41 [00:01<00:01, 15.07it/s]\u001b[A\n",
+      "评估:  49%|████▉     | 20/41 [00:01<00:01, 15.12it/s]\u001b[A\n",
+      "评估:  54%|█████▎    | 22/41 [00:01<00:01, 15.16it/s]\u001b[A\n",
+      "评估:  59%|█████▊    | 24/41 [00:01<00:01, 15.16it/s]\u001b[A\n",
+      "评估:  63%|██████▎   | 26/41 [00:01<00:00, 15.17it/s]\u001b[A\n",
+      "评估:  68%|██████▊   | 28/41 [00:01<00:00, 15.17it/s]\u001b[A\n",
+      "评估:  73%|███████▎  | 30/41 [00:01<00:00, 15.19it/s]\u001b[A\n",
+      "评估:  78%|███████▊  | 32/41 [00:02<00:00, 15.21it/s]\u001b[A\n",
+      "评估:  83%|████████▎ | 34/41 [00:02<00:00, 15.22it/s]\u001b[A\n",
+      "评估:  88%|████████▊ | 36/41 [00:02<00:00, 15.22it/s]\u001b[A\n",
+      "评估:  93%|█████████▎| 38/41 [00:02<00:00, 15.22it/s]\u001b[A\n",
+      "评估:  98%|█████████▊| 40/41 [00:02<00:00, 15.20it/s]\u001b[A\n",
+      "测试模型:  60%|██████    | 3/5 [00:08<00:05,  2.76s/it]\n",
+      "评估:   0%|          | 0/41 [00:00<?, ?it/s]\u001b[A\n",
+      "评估:   5%|▍         | 2/41 [00:00<00:02, 14.76it/s]\u001b[A\n",
+      "评估:  10%|▉         | 4/41 [00:00<00:02, 15.03it/s]\u001b[A\n",
+      "评估:  15%|█▍        | 6/41 [00:00<00:02, 15.13it/s]\u001b[A\n",
+      "评估:  20%|█▉        | 8/41 [00:00<00:02, 15.16it/s]\u001b[A\n",
+      "评估:  24%|██▍       | 10/41 [00:00<00:02, 15.17it/s]\u001b[A\n",
+      "评估:  29%|██▉       | 12/41 [00:00<00:01, 15.12it/s]\u001b[A\n",
+      "评估:  34%|███▍      | 14/41 [00:00<00:01, 15.11it/s]\u001b[A\n",
+      "评估:  39%|███▉      | 16/41 [00:01<00:01, 15.12it/s]\u001b[A\n",
+      "评估:  44%|████▍     | 18/41 [00:01<00:01, 15.13it/s]\u001b[A\n",
+      "评估:  49%|████▉     | 20/41 [00:01<00:01, 15.10it/s]\u001b[A\n",
+      "评估:  54%|█████▎    | 22/41 [00:01<00:01, 15.08it/s]\u001b[A\n",
+      "评估:  59%|█████▊    | 24/41 [00:01<00:01, 15.07it/s]\u001b[A\n",
+      "评估:  63%|██████▎   | 26/41 [00:01<00:00, 15.07it/s]\u001b[A\n",
+      "评估:  68%|██████▊   | 28/41 [00:01<00:00, 15.06it/s]\u001b[A\n",
+      "评估:  73%|███████▎  | 30/41 [00:01<00:00, 15.05it/s]\u001b[A\n",
+      "评估:  78%|███████▊  | 32/41 [00:02<00:00, 14.98it/s]\u001b[A\n",
+      "评估:  83%|████████▎ | 34/41 [00:02<00:00, 15.02it/s]\u001b[A\n",
+      "评估:  88%|████████▊ | 36/41 [00:02<00:00, 15.03it/s]\u001b[A\n",
+      "评估:  93%|█████████▎| 38/41 [00:02<00:00, 15.03it/s]\u001b[A\n",
+      "评估:  98%|█████████▊| 40/41 [00:02<00:00, 15.05it/s]\u001b[A\n",
+      "测试模型:  80%|████████  | 4/5 [00:11<00:02,  2.76s/it]\n",
+      "评估:   0%|          | 0/41 [00:00<?, ?it/s]\u001b[A\n",
+      "评估:   5%|▍         | 2/41 [00:00<00:02, 14.60it/s]\u001b[A\n",
+      "评估:  10%|▉         | 4/41 [00:00<00:02, 14.90it/s]\u001b[A\n",
+      "评估:  15%|█▍        | 6/41 [00:00<00:02, 14.97it/s]\u001b[A\n",
+      "评估:  20%|█▉        | 8/41 [00:00<00:02, 15.00it/s]\u001b[A\n",
+      "评估:  24%|██▍       | 10/41 [00:00<00:02, 15.03it/s]\u001b[A\n",
+      "评估:  29%|██▉       | 12/41 [00:00<00:01, 15.06it/s]\u001b[A\n",
+      "评估:  34%|███▍      | 14/41 [00:00<00:01, 15.08it/s]\u001b[A\n",
+      "评估:  39%|███▉      | 16/41 [00:01<00:01, 15.09it/s]\u001b[A\n",
+      "评估:  44%|████▍     | 18/41 [00:01<00:01, 15.10it/s]\u001b[A\n",
+      "评估:  49%|████▉     | 20/41 [00:01<00:01, 15.09it/s]\u001b[A\n",
+      "评估:  54%|█████▎    | 22/41 [00:01<00:01, 15.10it/s]\u001b[A\n",
+      "评估:  59%|█████▊    | 24/41 [00:01<00:01, 15.09it/s]\u001b[A\n",
+      "评估:  63%|██████▎   | 26/41 [00:01<00:00, 15.08it/s]\u001b[A\n",
+      "评估:  68%|██████▊   | 28/41 [00:01<00:00, 15.07it/s]\u001b[A\n",
+      "评估:  73%|███████▎  | 30/41 [00:01<00:00, 15.07it/s]\u001b[A\n",
+      "评估:  78%|███████▊  | 32/41 [00:02<00:00, 15.07it/s]\u001b[A\n",
+      "评估:  83%|████████▎ | 34/41 [00:02<00:00, 15.04it/s]\u001b[A\n",
+      "评估:  88%|████████▊ | 36/41 [00:02<00:00, 14.95it/s]\u001b[A\n",
+      "评估:  93%|█████████▎| 38/41 [00:02<00:00, 14.99it/s]\u001b[A\n",
+      "评估:  98%|█████████▊| 40/41 [00:02<00:00, 15.03it/s]\u001b[A\n",
+      "测试模型: 100%|██████████| 5/5 [00:13<00:00,  2.77s/it]"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "测试集 - 准确率: 84.44%, 精确率: 0.7620, 召回率: 0.6358, F1: 0.6932, AUC: 0.8972, PRC: 0.7939\n",
+      "测试集 - 准确率: 85.18%, 精确率: 0.7729, 召回率: 0.6568, F1: 0.7102, AUC: 0.9092, PRC: 0.8138\n",
       "\n",
-      "总运行时间: 0小时 53分钟 2.51秒\n"
+      "总运行时间: 0小时 42分钟 36.81秒\n"
      ]
     },
     {
@@ -1573,6 +1431,7 @@
     "from sklearn.metrics import precision_score, recall_score, f1_score, roc_auc_score, average_precision_score\n",
     "from sklearn.model_selection import KFold, train_test_split\n",
     "import numpy as np\n",
+    "import math\n",
     "import random\n",
     "from rdkit import Chem\n",
     "import time\n",
@@ -1587,23 +1446,30 @@
     "# 超参数\n",
     "learning_rate = 0.001\n",
     "epochs = 200\n",
-    "batch_size = 64\n",
+    "batch_size = 128\n",
     "k_folds = 5\n",
     "threshold = 0.7\n",
+    "drug_kernel = [4, 6, 8]\n",
+    "protein_kernel = [4, 8, 12]\n",
     "dropout = 0.5\n",
-    "attention_dim = 64  # 调整注意力维度以适应去掉 CNN 后的结构\n",
-    "mix_attention_head = 8\n",
     "\n",
     "# 加载嵌入\n",
     "drug_embedding = torch.load(\"/kaggle/input/ligands-n-protein/ligands_davis.pt\").to(device)\n",
     "protein_embedding = torch.load(\"/kaggle/input/ligands-n-protein/protein_davis.pt\").to(device)\n",
     "\n",
     "drug_max_length = drug_embedding.shape[1]\n",
-    "protein_max_length = drug_embedding.shape[1]\n",
+    "protein_max_length = protein_embedding.shape[1]\n",
     "drug_dim = drug_embedding.shape[2]\n",
     "protein_dim = protein_embedding.shape[2]\n",
     "\n",
-    "# 双向多头交叉注意力模块（保持不变）\n",
+    "drug_afterCNN = drug_max_length - sum(drug_kernel) + 3\n",
+    "protein_afterCNN = protein_max_length - sum(protein_kernel) + 3\n",
+    "\n",
+    "conv = 16\n",
+    "attention_dim = conv * 4\n",
+    "mix_attention_head = 8\n",
+    "\n",
+    "# 双向多头交叉注意力模块\n",
     "class BidirectionalMultiheadCrossAttention(nn.Module):\n",
     "    def __init__(self, embed_dim, num_heads):\n",
     "        super().__init__()\n",
@@ -1635,17 +1501,17 @@
     "        K_d = self.W_k_shared(drug_feat).view(B, L_d, self.num_heads, self.head_dim).transpose(1, 2)\n",
     "        V_d = self.W_v_shared(drug_feat).view(B, L_d, self.num_heads, self.head_dim).transpose(1, 2)\n",
     "\n",
-    "        attn_scores_d = torch.matmul(Q_d, K_p.transpose(-2, -1)) / self.scale\n",
-    "        attn_weights_d = torch.softmax(attn_scores_d, dim=-1)\n",
-    "        attn_output_d1 = torch.matmul(attn_weights_d, V_p)\n",
+    "        attn_scores_d = torch.matmul(Q_d,K_p.transpose(-2,-1))/self.scale\n",
+    "        attn_weights_d = torch.softmax(attn_scores_d,dim=-1)\n",
+    "        attn_output_d1 = torch.matmul(attn_weights_d,V_p)\n",
     "\n",
-    "        attn_scores_p = torch.matmul(Q_p, K_d.transpose(-2, -1)) / self.scale\n",
-    "        attn_weights_p = torch.softmax(attn_scores_p, dim=-1)\n",
-    "        attn_output_p1 = torch.matmul(attn_weights_p, V_d)\n",
+    "        attn_scores_p = torch.matmul(Q_p,K_d.transpose(-2,-1))/self.scale\n",
+    "        attn_weights_p = torch.softmax(attn_scores_p,dim =-1)\n",
+    "        attn_output_p1 = torch.matmul(attn_weights_p,V_d)\n",
     "\n",
-    "        attn_output_d1 = attn_output_d1.transpose(1, 2).contiguous().view(B, L_d, self.embed_dim)\n",
-    "        attn_output_p1 = attn_output_p1.transpose(1, 2).contiguous().view(B, L_p, self.embed_dim)\n",
-    "\n",
+    "        attn_output_d1 = attn_output_d1.transpose(1,2).contiguous().view(B,L_d,self.embed_dim)\n",
+    "        attn_output_p1 = attn_output_p1.transpose(1,2).contiguous().view(B,L_p,self.embed_dim)\n",
+    "        \n",
     "        updated_drug_feat = self.out_proj_d(attn_output_d1)\n",
     "        updated_protein_feat = self.out_proj_p(attn_output_p1)\n",
     "\n",
@@ -1657,13 +1523,13 @@
     "        K_d2 = self.W_k_shared(updated_drug_feat).view(B, L_d, self.num_heads, self.head_dim).transpose(1, 2)\n",
     "        V_d2 = self.W_v_shared(updated_drug_feat).view(B, L_d, self.num_heads, self.head_dim).transpose(1, 2)\n",
     "\n",
-    "        attn_scores_d2 = torch.matmul(Q_d2, K_p2.transpose(-2, -1)) / self.scale\n",
-    "        attn_weights_d2 = torch.softmax(attn_scores_d2, dim=-1)\n",
-    "        attn_output_d2 = torch.matmul(attn_weights_d2, V_p2)\n",
+    "        attn_scores_d2 = torch.matmul(Q_d2,K_p2.transpose(-2,-1))/self.scale\n",
+    "        attn_weights_d2 = torch.softmax(attn_scores_d2,dim=-1)\n",
+    "        attn_output_d2 = torch.matmul(attn_weights_d2,V_p2)\n",
     "\n",
-    "        attn_scores_p2 = torch.matmul(Q_p2, K_d2.transpose(-2, -1)) / self.scale\n",
-    "        attn_weights_p2 = torch.softmax(attn_scores_p2, dim=-1)\n",
-    "        attn_output_p2 = torch.matmul(attn_weights_p2, V_d2)\n",
+    "        attn_scores_p2 = torch.matmul(Q_p2,K_d2.transpose(-2,-1))/self.scale\n",
+    "        attn_weights_p2 = torch.softmax(attn_scores_p2,dim =-1)\n",
+    "        attn_output_p2 = torch.matmul(attn_weights_p2,V_d2)\n",
     "\n",
     "        attn_output_d2 = attn_output_d2.transpose(1, 2).contiguous().view(B, L_d, self.embed_dim)\n",
     "        attn_output_p2 = attn_output_p2.transpose(1, 2).contiguous().view(B, L_p, self.embed_dim)\n",
@@ -1673,58 +1539,78 @@
     "\n",
     "        return final_drug_feat, final_protein_feat\n",
     "\n",
-    "# 修改后的模型（去掉 CNN）\n",
+    "\n",
     "class Model(nn.Module):\n",
     "    def __init__(self, drug_embedding, protein_embedding):\n",
     "        super().__init__()\n",
     "        self.drug_embedding = nn.Parameter(drug_embedding, requires_grad=True)\n",
     "        self.protein_embedding = nn.Parameter(protein_embedding, requires_grad=True)\n",
     "\n",
-    "        # 线性层将嵌入维度转换为注意力维度\n",
-    "        self.drug_projection = nn.Linear(drug_dim, attention_dim)\n",
-    "        self.protein_projection = nn.Linear(protein_dim, attention_dim)\n",
+    "        self.drug_CNN = nn.Sequential(\n",
+    "            nn.Conv1d(drug_dim, conv, drug_kernel[0]),\n",
+    "            nn.BatchNorm1d(conv),\n",
+    "            nn.ReLU(),\n",
+    "            nn.Conv1d(conv, conv * 2, drug_kernel[1]),\n",
+    "            nn.BatchNorm1d(conv * 2),\n",
+    "            nn.ReLU(),\n",
+    "            nn.Conv1d(conv * 2, conv * 4, drug_kernel[2]),\n",
+    "            nn.BatchNorm1d(conv * 4),\n",
+    "            nn.ReLU(),\n",
+    "        )\n",
     "\n",
-    "        # 注意力模块\n",
+    "        self.protein_CNN = nn.Sequential(\n",
+    "            nn.Conv1d(protein_dim, conv, protein_kernel[0]),\n",
+    "            nn.BatchNorm1d(conv),\n",
+    "            nn.ReLU(),\n",
+    "            nn.Conv1d(conv, conv * 2, protein_kernel[1]),\n",
+    "            nn.BatchNorm1d(conv * 2),\n",
+    "            nn.ReLU(),\n",
+    "            nn.Conv1d(conv * 2, conv * 4, protein_kernel[2]),\n",
+    "            nn.BatchNorm1d(conv * 4),\n",
+    "            nn.ReLU(),\n",
+    "        )\n",
+    "\n",
+    "        self.drug_pool = nn.MaxPool1d(drug_afterCNN)\n",
+    "        self.protein_pool = nn.MaxPool1d(protein_afterCNN)\n",
     "        self.attention = BidirectionalMultiheadCrossAttention(attention_dim, mix_attention_head)\n",
     "\n",
-    "        # 全局池化（替代原来的 max pooling）\n",
-    "        self.drug_pool = nn.AdaptiveMaxPool1d(1)  # 全局最大池化\n",
-    "        self.protein_pool = nn.AdaptiveMaxPool1d(1)\n",
-    "\n",
-    "        # 全连接层\n",
     "        self.fc = nn.Sequential(\n",
     "            nn.Dropout(dropout),\n",
-    "            nn.Linear(attention_dim * 2, 1024),\n",
+    "            nn.Linear(conv * 8, 1024),\n",
     "            nn.LeakyReLU(),\n",
     "            nn.Dropout(dropout),\n",
+    "            # nn.Linear(1024, 1024),\n",
+    "            # nn.LeakyReLU(),\n",
+    "            # nn.Dropout(dropout),\n",
     "            nn.Linear(1024, 512),\n",
     "            nn.LeakyReLU(),\n",
     "            nn.Linear(512, 2)\n",
     "        )\n",
     "\n",
     "    def forward(self, drug_idx, protein_idx):\n",
-    "        drug = self.drug_embedding[drug_idx]  # [batch, drug_max_length, drug_dim]\n",
-    "        protein = self.protein_embedding[protein_idx]  # [batch, protein_max_length, protein_dim]\n",
+    "        drug = self.drug_embedding[drug_idx]\n",
+    "        protein = self.protein_embedding[protein_idx]\n",
     "\n",
-    "        # 投影到注意力维度\n",
-    "        drug_feat = self.drug_projection(drug)  # [batch, drug_max_length, attention_dim]\n",
-    "        protein_feat = self.protein_projection(protein)  # [batch, protein_max_length, attention_dim]\n",
+    "        drug = drug.permute(0, 2, 1)\n",
+    "        protein = protein.permute(0, 2, 1)\n",
     "\n",
-    "        # 注意力机制\n",
+    "        drug_feat = self.drug_CNN(drug).permute(0, 2, 1)\n",
+    "        protein_feat = self.protein_CNN(protein).permute(0, 2, 1)\n",
+    "\n",
     "        drug_att, protein_att = self.attention(drug_feat, protein_feat)\n",
+    "        # drug_att = drug_feat\n",
+    "        # protein_att = protein_feat\n",
     "\n",
-    "        # 全局池化\n",
-    "        drug_att = self.drug_pool(drug_att.permute(0, 2, 1)).squeeze(2)  # [batch, attention_dim]\n",
-    "        protein_att = self.protein_pool(protein_att.permute(0, 2, 1)).squeeze(2)  # [batch, attention_dim]\n",
+    "        drug_att = self.drug_pool(drug_att.permute(0, 2, 1)).squeeze(2)\n",
+    "        protein_att = self.protein_pool(protein_att.permute(0, 2, 1)).squeeze(2)\n",
     "\n",
-    "        # 拼接并通过全连接层\n",
     "        return self.fc(torch.cat([drug_att, protein_att], dim=1))\n",
     "\n",
-    "# 数据集类（保持不变）\n",
+    "\n",
     "class Dataset(Dataset):\n",
     "    def __init__(self, file_path, augment_smiles=True, augment_factor=2, augment_protein=True,\n",
     "                 mutation_rate=0.01, augment_affinity=False, noise_std=0.1):\n",
-    "        self.drug_embedding = drug_embedding\n",
+    "        self.drug_embedding = drug_embedding  # 初始化嵌入\n",
     "        self.protein_embedding = protein_embedding\n",
     "        self.smiles2idx, self.protein2idx, self.data = {}, {}, []\n",
     "        self.smiles_list = []\n",
@@ -1784,7 +1670,7 @@
     "        d, p, y = self.data[idx]\n",
     "        return {'drug_idx': torch.tensor(d), 'protein_idx': torch.tensor(p), 'label': torch.tensor(y)}\n",
     "\n",
-    "# 评估函数（保持不变）\n",
+    "\n",
     "def evaluate(model, loader, return_probs=False):\n",
     "    model.eval()\n",
     "    y_true, y_pred, y_prob = [], [], []\n",
@@ -1808,7 +1694,6 @@
     "        return metrics, np.array(y_prob), np.array(y_true)\n",
     "    return metrics\n",
     "\n",
-    "# 数据集加载\n",
     "dataset = Dataset(\"/kaggle/input/davis-n-kiba/Davis.txt\",\n",
     "                  augment_smiles=False,\n",
     "                  augment_factor=2,\n",
@@ -1819,11 +1704,12 @@
     "\n",
     "total_start_time = time.time()\n",
     "\n",
-    "# 训练和测试流程（与原代码一致）\n",
+    "# 第一步：将数据集分为 80% 训练集和 20% 测试集\n",
     "all_indices = list(range(len(dataset)))\n",
     "train_indices, test_indices = train_test_split(all_indices, test_size=0.2, random_state=42)\n",
     "test_loader = DataLoader(Subset(dataset, test_indices), batch_size=batch_size, shuffle=False)\n",
     "\n",
+    "# 第二步：在训练集上进行 5 折交叉验证\n",
     "kf = KFold(n_splits=k_folds, shuffle=True, random_state=42)\n",
     "fold_results = []\n",
     "models = []\n",
@@ -1885,6 +1771,7 @@
     "\n",
     "        val_loss /= len(val_loader)\n",
     "\n",
+    "        # 计算验证集指标（使用固定阈值）\n",
     "        (acc, pre, rec, f1, auc, prc) = evaluate(model, val_loader)\n",
     "        print(f\"第 {epoch + 1} 轮, 训练损失: {train_loss:.4f}, 验证损失: {val_loss:.4f}, 验证 F1: {f1:.4f}\")\n",
     "\n",
@@ -1920,11 +1807,13 @@
     "    print(f\"第 {fold + 1} 折验证 - 准确率: {acc:.2f}%, 精确率: {pre:.4f}, 召回率: {rec:.4f}, \"\n",
     "          f\"F1: {f1:.4f}, AUC: {auc:.4f}, PRC: {prc:.4f}\")\n",
     "\n",
+    "# 计算验证集的平均指标\n",
     "avg_val = np.mean(fold_results, axis=0)\n",
     "print(f\"\\n=== {k_folds} 折验证的平均结果 ===\")\n",
     "print(f\"准确率: {avg_val[0]:.2f}%, 精确率: {avg_val[1]:.4f}, 召回率: {avg_val[2]:.4f}, \"\n",
     "      f\"F1: {avg_val[3]:.4f}, AUC: {avg_val[4]:.4f}, PRC: {avg_val[5]:.4f}\")\n",
     "\n",
+    "# 第三步：在测试集上进行集成预测\n",
     "print(\"\\n=== 测试集上的集成预测 ===\")\n",
     "probs_list = []\n",
     "y_true = None\n",
@@ -1934,9 +1823,11 @@
     "    if y_true is None:\n",
     "        y_true = true_labels\n",
     "\n",
+    "# 计算 5 个模型的平均概率\n",
     "avg_probs = np.mean(probs_list, axis=0)\n",
-    "y_pred = (avg_probs >= threshold).astype(int)\n",
+    "y_pred = (avg_probs >= threshold).astype(int)  # 使用固定阈值 0.7\n",
     "\n",
+    "# 计算测试集指标\n",
     "test_acc = 100 * (y_true == y_pred).sum() / len(y_true)\n",
     "test_pre = precision_score(y_true, y_pred)\n",
     "test_rec = recall_score(y_true, y_pred)\n",
@@ -1947,12 +1838,14 @@
     "print(f\"测试集 - 准确率: {test_acc:.2f}%, 精确率: {test_pre:.4f}, 召回率: {test_rec:.4f}, \"\n",
     "      f\"F1: {test_f1:.4f}, AUC: {test_auc:.4f}, PRC: {test_prc:.4f}\")\n",
     "\n",
+    "# 计算总运行时间\n",
     "total_end_time = time.time()\n",
     "total_time = total_end_time - total_start_time\n",
     "hours, rem = divmod(total_time, 3600)\n",
     "minutes, seconds = divmod(rem, 60)\n",
     "print(f\"\\n总运行时间: {int(hours)}小时 {int(minutes)}分钟 {seconds:.2f}秒\")\n",
     "\n",
+    "# 第四步：将结果写入文件\n",
     "with open(\"results.txt\", \"a\") as f:\n",
     "    f.write(\"\\n=== 结果 ===\\n\")\n",
     "    f.write(f\"{k_folds} 折验证的平均结果:\\n\")\n",
@@ -1970,13 +1863,13 @@
     "    f.write(f\"AUC: {test_auc:.4f}\\n\")\n",
     "    f.write(f\"PRC: {test_prc:.4f}\\n\")\n",
     "    f.write(f\"\\n总运行时间: {int(hours)}小时 {int(minutes)}分钟 {seconds:.2f}秒\\n\")\n",
-    "    f.write(\"=\" * 50 + \"\\n\")"
+    "    f.write(\"=\" * 50 + \"\\n\")\n"
    ]
   }
  ],
  "metadata": {
   "kaggle": {
-   "accelerator": "none",
+   "accelerator": "gpu",
    "dataSources": [
     {
      "datasetId": 6817938,
@@ -1989,7 +1882,7 @@
      "sourceType": "datasetVersion"
     }
    ],
-   "isGpuEnabled": false,
+   "isGpuEnabled": true,
    "isInternetEnabled": true,
    "language": "python",
    "sourceType": "notebook"
@@ -2013,14 +1906,14 @@
   },
   "papermill": {
    "default_parameters": {},
-   "duration": 3231.205482,
-   "end_time": "2025-04-29T09:26:26.992525",
+   "duration": 2599.853171,
+   "end_time": "2025-04-29T11:31:04.779524",
    "environment_variables": {},
    "exception": null,
    "input_path": "__notebook__.ipynb",
    "output_path": "__notebook__.ipynb",
    "parameters": {},
-   "start_time": "2025-04-29T08:32:35.787043",
+   "start_time": "2025-04-29T10:47:44.926353",
    "version": "2.6.0"
   }
  },
