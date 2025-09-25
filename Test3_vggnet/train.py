@@ -43,7 +43,7 @@ def main():
     with open('class_indices.json', 'w') as json_file:
         json_file.write(json_str)
 
-    batch_size = 16
+    batch_size = 32
     nw = min([os.cpu_count(), batch_size if batch_size > 1 else 0, 8])  # number of workers
     print('Using {} dataloader workers every process'.format(nw))
 
@@ -63,7 +63,7 @@ def main():
     # test_data_iter = iter(validate_loader)
     # test_image, test_label = test_data_iter.next()
 
-    model_name = "vgg16"
+    model_name = "vgg19"
     net = vgg(model_name=model_name, num_classes=5, init_weights=True)
     net.to(device)
     loss_function = nn.CrossEntropyLoss()
