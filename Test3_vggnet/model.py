@@ -11,7 +11,7 @@ model_urls = {
 
 
 class VGG(nn.Module):
-    def __init__(self, features, num_classes=1000, init_weights=False,dropout=0.3):
+    def __init__(self, features, num_classes=1000, init_weights=False,dropout=0.1):
         super(VGG, self).__init__()
         self.features = features
         self.classifier = nn.Sequential(
