@@ -1,13 +1,10 @@
 import os
 import json
-
 import torch
 from PIL import Image
 from torchvision import transforms
 import matplotlib.pyplot as plt
-
 from model import vgg
-
 
 def main():
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
