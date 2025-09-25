@@ -11,16 +11,16 @@ model_urls = {
 
 
 class VGG(nn.Module):
-    def __init__(self, features, num_classes=1000, init_weights=False):
+    def __init__(self, features, num_classes=1000, init_weights=False,dropout=0.3):
         super(VGG, self).__init__()
         self.features = features
         self.classifier = nn.Sequential(
             nn.Linear(512*7*7, 4096),
             nn.ReLU(True),
-            nn.Dropout(p=0.5),
+            nn.Dropout(dropout),
             nn.Linear(4096, 4096),
             nn.ReLU(True),
-            nn.Dropout(p=0.5),
+            nn.Dropout(dropout),
             nn.Linear(4096, num_classes)
         )
         if init_weights:
