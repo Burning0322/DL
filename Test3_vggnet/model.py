@@ -1,4 +1,4 @@
-import torch.nn as nn
+ import torch.nn as nn
 import torch
 
 # official pretrain weights
@@ -11,7 +11,7 @@ model_urls = {
 
 
 class VGG(nn.Module):
-    def __init__(self, features, num_classes=1000, init_weights=False,dropout=0.5):
+    def __init__(self, features, num_classes=1000, init_weights=False,dropout=0.3):
         super(VGG, self).__init__()
         self.features = features
         self.classifier = nn.Sequential(
