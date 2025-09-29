@@ -1,4 +1,4 @@
- import torch.nn as nn
+import torch.nn as nn
 import torch
 
 # official pretrain weights
