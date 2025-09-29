@@ -61,7 +61,7 @@ def main():
     # test_data_iter = iter(validate_loader)
     # test_image, test_label = test_data_iter.next()
 
-    model_name = "vgg19"
+    model_name = "vgg16"
     net = vgg(model_name=model_name, num_classes=5, init_weights=True)
     net.to(device)
     loss_function = nn.CrossEntropyLoss()
