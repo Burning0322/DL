@@ -31,10 +31,12 @@ def main():
     with open(json_path, "r") as f:
         class_indict = json.load(f)
     
+    model_name = "vgg16"
+
     # create model
-    model = vgg(model_name="vgg16", num_classes=5).to(device)
+    model = vgg(model_name="{model_name}", num_classes=5).to(device)
     # load model weights
-    weights_path = "./vgg16Net.pth"
+    weights_path = "./{model_name}Net.pth"
     assert os.path.exists(weights_path), "file: '{}' dose not exist.".format(weights_path)
     model.load_state_dict(torch.load(weights_path, map_location=device))
 

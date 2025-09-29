@@ -3,12 +3,11 @@ import sys
 import json
 import torch
 import torch.nn as nn
+from torch.utils.tensorboard import SummaryWriter
 from torchvision import transforms, datasets
 import torch.optim as optim
 from tqdm import tqdm
-
 from model import vgg
-
 
 def main():
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -42,7 +41,7 @@ def main():
     with open('class_indices.json', 'w') as json_file:
         json_file.write(json_str)
 
-    batch_size = 16
+    batch_size = 32
     nw = min([os.cpu_count(), batch_size if batch_size > 1 else 0, 8])  # number of workers
     print('Using {} dataloader workers every process'.format(nw))
 
@@ -63,15 +62,17 @@ def main():
     # test_image, test_label = test_data_iter.next()
 
     model_name = "vgg16"
-    net = vgg(model_name=model_name, num_classes=5, init_weights=True)
+    net = vgg(model_name={model_name}, num_classes=5, init_weights=True)
     net.to(device)
     loss_function = nn.CrossEntropyLoss()
     optimizer = optim.Adam(net.parameters(), lr=0.0001)
 
-    epochs = 30
+    epochs = 100
     best_acc = 0.0
     save_path = './{}Net.pth'.format(model_name)
     train_steps = len(train_loader)
+    log_dir = os.path.join('runs', model_name)
+    writer = SummaryWriter(log_dir=log_dir)
     for epoch in range(epochs):
         # train
         net.train()
@@ -92,6 +93,9 @@ def main():
                                                                      epochs,
                                                                      loss)
 
+            global_step = epoch * train_steps + step
+            writer.add_scalar('loss/train_step', loss.item(), global_step)
+
         # validate
         net.eval()
         acc = 0.0  # accumulate accurate number / epoch
@@ -104,6 +108,8 @@ def main():
                 acc += torch.eq(predict_y, val_labels.to(device)).sum().item()
 
         val_accurate = acc / val_num
+        writer.add_scalar('loss/train_epoch', running_loss / train_steps, epoch)
+        writer.add_scalar('accuracy/val', val_accurate, epoch)
         print('[epoch %d] train_loss: %.3f  val_accuracy: %.3f' %
               (epoch + 1, running_loss / train_steps, val_accurate))
 
@@ -112,6 +118,7 @@ def main():
             torch.save(net.state_dict(), save_path)
 
     print('Finished Training')
+    writer.close()
 
 
 if __name__ == '__main__':
