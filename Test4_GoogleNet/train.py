@@ -4,9 +4,9 @@ import json
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
 
-from model import GoogleNet
+from model import GoogLeNet
 
-model = GoogleNet(num_classes=5, aux_logits=True, init_weights=True)
+model = GoogLeNet(num_classes=5, aux_logits=True, init_weights=True)
 model.to(device)
 
 if torch.cuda.device.count() > 1:
@@ -59,7 +59,7 @@ save_path = './GoogleNet.pth'
 from tqdm import tqdm
 import sys
 
-for epoch in epochs:
+for epoch in range(epochs):
     model.train()
     running_loss = 0.0
 
