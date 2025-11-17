@@ -11,7 +11,7 @@ model = RTDETR("rtdetr-l.pt")
 model.info()
 
 # Train the model on the COCO8 example dataset for 100 epochs
-results = model.train(data="coco.yaml", epochs=100, imgsz=640,batch = 4,optimizer="AdamW",lr0 = 0.001,patience=5)
+results = model.train(data="coco.yaml", epochs=100, imgsz=640,batch = 2,optimizer="AdamW",lr0 = 0.001,patience=5)
 
 # Run inference with the RT-DETR-l model on the 'bus.jpg' image
 results = model("./kaggle/input/buspic/bus.jpg")
