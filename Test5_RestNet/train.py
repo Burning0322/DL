@@ -65,8 +65,6 @@ print("using {} images for training, {} images for validation.".format(len(train
                                                                         len(val_dataset)))
 net = resnet34(num_classes=10)
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-
 net.to(device)
 
 # model_weight_path = "/resnet34-pre.pth"
@@ -83,7 +81,7 @@ optimizer = optim.Adam(net.parameters(),lr=0.001)
 
 epochs = 100
 best_acc = 0.0
-save = "./resNet34.pth"
+save = "./resNetCIFAR10.pth"
 train_steps = len(train_loader)
 
 for epoch in range(epochs):
