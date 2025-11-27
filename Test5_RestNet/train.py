@@ -1,5 +1,6 @@
 import sys
 import torch
+from pubchempy import download
 from torchvision import transforms, datasets
 import json
 from model import resnet34
@@ -9,6 +10,8 @@ import torch.optim as optim
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
+
+batch_size = 16
 
 data_transform = {
     "train":transforms.Compose([
@@ -25,54 +28,60 @@ data_transform = {
         transforms.Normalize([0.485, 0.456, 0.406],[0.229, 0.224, 0.225])
     ])
 }
+#
+# train_dataset = datasets.ImageFolder(root="/Users/renhonglow/Desktop/DL/dataset/train",transform=data_transform["train"])
+#
+# flower_list = train_dataset.class_to_idx
+#
+# class_dict = dict((val,key) for key,val in flower_list.items())
+#
+# with open("class_indices.json","w") as file:
+#     json.dump(class_dict,file,indent=4)
+#
+# train_loader = torch.utils.data.DataLoader(
+#     train_dataset,
+#     batch_size=batch_size,
+#     shuffle=True,
+# )
+#
+# val_dataset = datasets.ImageFolder(root="/Users/renhonglow/Desktop/DL/dataset/val",transform=data_transform["val"])
+#
+# val_loader = torch.utils.data.DataLoader(
+#     val_dataset,
+#     batch_size=batch_size,
+#     shuffle=False,
+# )
+#
 
-train_dataset = datasets.ImageFolder(root="/Users/renhonglow/Desktop/DL/dataset/train",transform=data_transform["train"])
+train_dataset = torch.datasets.CIFAR10(root="./data",train=True,download=True,transform=data_transform["train"])
 
-flower_list = train_dataset.class_to_idx
+train_loader = torch.utils.data.DataLoader(dataset=train_dataset,batch_size=batch_size,shuffle=True)
 
-class_dict = dict((val,key) for key,val in flower_list.items())
+val_dataset = torch.datasets.CIFAR10(root="./data",train=False,download=True,transform=data_transform["val"])
 
-with open("class_indices.json","w") as file:
-    json.dump(class_dict,file,indent=4)
-
-batch_size = 16
-
-train_loader = torch.utils.data.DataLoader(
-    train_dataset,
-    batch_size=batch_size,
-    shuffle=True,
-)
-
-val_dataset = datasets.ImageFolder(root="/Users/renhonglow/Desktop/DL/dataset/val",transform=data_transform["val"])
-
-val_loader = torch.utils.data.DataLoader(
-    val_dataset,
-    batch_size=batch_size,
-    shuffle=False,
-)
+val_loader = torch.utils.data.DataLoader(dataset=val_dataset,batch_size=batch_size,shuffle=False)
 
 print("using {} images for training, {} images for validation.".format(len(train_dataset),
                                                                         len(val_dataset)))
-
-net = resnet34()
+net = resnet34(num_classes=10)
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-net.to(device)                      
-
-model_weight_path = "/resnet34-pre.pth"
-
-net.load_state_dict(torch.load(model_weight_path),map_location=device)
-
-in_channel = net.fc.in_features
-net.fc = nn.Linear(in_channel,5)
 net.to(device)
+
+# model_weight_path = "/resnet34-pre.pth"
+#
+# net.load_state_dict(torch.load(model_weight_path),map_location=device)
+#
+# in_channel = net.fc.in_features
+# net.fc = nn.Linear(in_channel,10)
+# net.to(device)
 
 loss_function = nn.CrossEntropyLoss()
 
-optimizer = optim.Adam(net.parameters(),lr=0.0001)
+optimizer = optim.Adam(net.parameters(),lr=0.001)
 
-epochs = 10
+epochs = 100
 best_acc = 0.0
 save = "./resNet34.pth"
 train_steps = len(train_loader)
