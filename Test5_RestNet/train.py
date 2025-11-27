@@ -1,11 +1,9 @@
 import sys
 import torch
-from pubchempy import download
 from torchvision import transforms, datasets
-import json
 from model import resnet34
 from torch import nn
-import tqdm
+from tqdm import tqdm
 import torch.optim as optim
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -53,11 +51,11 @@ data_transform = {
 # )
 #
 
-train_dataset = torch.datasets.CIFAR10(root="./data",train=True,download=True,transform=data_transform["train"])
+train_dataset = datasets.CIFAR10(root="./data",train=True,download=True,transform=data_transform["train"])
 
 train_loader = torch.utils.data.DataLoader(dataset=train_dataset,batch_size=batch_size,shuffle=True)
 
-val_dataset = torch.datasets.CIFAR10(root="./data",train=False,download=True,transform=data_transform["val"])
+val_dataset = datasets.CIFAR10(root="./data",train=False,download=True,transform=data_transform["val"])
 
 val_loader = torch.utils.data.DataLoader(dataset=val_dataset,batch_size=batch_size,shuffle=False)
 
